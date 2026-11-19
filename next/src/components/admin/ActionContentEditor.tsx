@@ -350,7 +350,7 @@ export const ActionContentEditor = ({
     setter((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const TypeIcon = getTypeIcon(action?.template_id);
+  const TypeIcon = getTypeIcon(action?.template_id ?? null);
 
   const formatAmount = (amt: number, cur: string | null, crypto: string | null) => {
     if (cur === "CRYPTO" || cur === "ETH" || cur === "BTC") return `${amt} ${crypto || cur}`;
