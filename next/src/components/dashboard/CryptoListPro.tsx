@@ -27,7 +27,7 @@ interface CryptoListProProps {
 
 // Generate mock sparkline data
 const generateSparkline = (trend: number) => {
-  const data = [];
+  const data: { value: number }[] = [];
   let value = 100;
   for (let i = 0; i < 24; i++) {
     const change = (Math.random() - 0.5) * 5 + (trend > 0 ? 0.5 : -0.5);

@@ -11,7 +11,7 @@ interface PortfolioChartProps {
 
 // Generate mock historical data
 const generateChartData = (days: number, trend: 'up' | 'down' | 'stable') => {
-  const data = [];
+  const data: { date: string; value: number; fullDate: string }[] = [];
   let baseValue = 10000;
   const now = new Date();
   
