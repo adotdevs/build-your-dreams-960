@@ -226,39 +226,67 @@ class StorageBucket {
   }
 }
 
-class Channel {
-  private listeners: { filter: { event?: string; table?: string; filter?: string }; cb: (payload: { new: unknown; old: unknown; eventType: string }) => void }[] = [];
-  private timer: ReturnType<typeof setInterval> | null = null;
-  private since = 0;
+type LiveListener = {
+  filter: { event?: string; table?: string; filter?: string };
+  cb: (payload: { new: unknown; old: unknown; eventType: string }) => void;
+};
 
-  on(_event: string, filter: { event?: string; schema?: string; table?: string; filter?: string }, cb: (payload: { new: unknown; old: unknown; eventType: string }) => void) {
+class Channel {
+  listeners: LiveListener[] = [];
+
+  on(_event: string, filter: LiveListener["filter"], cb: LiveListener["cb"]) {
     this.listeners.push({ filter, cb });
     return this;
   }
 
   subscribe() {
-    this.timer = setInterval(async () => {
-      try {
-        const response = await fetch(`/api/realtime?since=${this.since}`, { credentials: "include" });
-        const json = await response.json();
-        for (const event of json.events || []) {
-          if (event.seq > this.since) this.since = event.seq;
-          for (const listener of this.listeners) {
-            if (listener.filter.table && listener.filter.table !== event.table) continue;
-            if (listener.filter.event && listener.filter.event !== "*" && listener.filter.event !== event.type) continue;
-            if (listener.filter.filter && !matches(listener.filter.filter, event.new || {})) continue;
-            listener.cb({ new: event.new, old: event.old, eventType: event.type });
-          }
-        }
-      } catch {
-        // Live updates resume on the next poll.
-      }
-    }, 2000);
+    liveChannels.add(this);
+    ensureLivePoll();
     return this;
   }
 
   stop() {
-    if (this.timer) clearInterval(this.timer);
+    liveChannels.delete(this);
+    if (liveChannels.size === 0 && liveTimer) {
+      clearInterval(liveTimer);
+      liveTimer = null;
+    }
+  }
+}
+
+const liveChannels = new Set<Channel>();
+let liveTimer: ReturnType<typeof setInterval> | null = null;
+let liveSince = 0;
+let livePollInFlight = false;
+
+function ensureLivePoll() {
+  if (liveTimer) return;
+  liveTimer = setInterval(() => {
+    void pollLive();
+  }, 2000);
+}
+
+async function pollLive() {
+  if (livePollInFlight || liveChannels.size === 0) return;
+  livePollInFlight = true;
+  try {
+    const response = await fetch(`/api/realtime?since=${liveSince}`, { credentials: "include" });
+    const json = await response.json();
+    for (const event of json.events || []) {
+      if (event.seq > liveSince) liveSince = event.seq;
+      for (const channel of liveChannels) {
+        for (const listener of channel.listeners) {
+          if (listener.filter.table && listener.filter.table !== event.table) continue;
+          if (listener.filter.event && listener.filter.event !== "*" && listener.filter.event !== event.type) continue;
+          if (listener.filter.filter && !matches(listener.filter.filter, event.new || {})) continue;
+          listener.cb({ new: event.new, old: event.old, eventType: event.type });
+        }
+      }
+    }
+  } catch {
+    // The next poll retries.
+  } finally {
+    livePollInFlight = false;
   }
 }
 

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import NextTopLoader from "nextjs-toploader";
+import RequestBar from "@/components/request-bar";
 import { AuthProvider } from "@/hooks/useAuth";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
@@ -24,6 +25,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
         crawlSpeed={200}
         speed={200}
       />
+      <RequestBar />
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
           <TooltipProvider>

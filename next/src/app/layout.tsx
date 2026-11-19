@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" translate="no" className="notranslate">
-      <body translate="no" className="notranslate">
+    <html lang="en" translate="no" className="notranslate" suppressHydrationWarning>
+      <body translate="no" className="notranslate" suppressHydrationWarning>
         <Suspense fallback={null}>
           <AppShell>{children}</AppShell>
         </Suspense>
