@@ -358,7 +358,7 @@ export async function runRpc(name: string, args: Record<string, unknown>) {
 
   if (name === "validate_company_crypto_code") {
     const code = String(args.p_crypto_id_code || "").toUpperCase();
-    const rows = await db.collection("companies").find({ status: "active" }).toArray();
+    const rows = await db.collection("companies").find({ status: { $ne: "paused" } }).toArray();
     const match = rows.find((row) => String(row.crypto_id_code || "").toUpperCase() === code);
     return ok(match ? [{ id: match.id, name: match.name }] : []);
   }
@@ -478,7 +478,7 @@ async function createAccount(input: {
   let companyId = input.companyId ?? null;
   if (!companyId && input.metadata?.company_id) companyId = String(input.metadata.company_id);
   if (!companyId) {
-    const company = await db.collection("companies").find({ status: "active" }).sort({ created_at: 1 }).limit(1).next();
+    const company = await db.collection("companies").find({ status: { $ne: "paused" } }).sort({ created_at: 1 }).limit(1).next();
     companyId = company?.id ? String(company.id) : null;
   }
   await db.collection("users").insertOne({

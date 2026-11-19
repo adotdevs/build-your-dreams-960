@@ -125,7 +125,7 @@ const CompanyDetail = () => {
             <h1 className="text-3xl font-bold">{company.name}</h1>
             <div className="flex items-center gap-3 mt-2">
               <code className="rounded bg-muted px-2 py-1 text-sm font-mono">{company.crypto_id_code}</code>
-              <Badge variant={company.status === 'active' ? 'default' : company.status === 'paused' ? 'destructive' : 'secondary'}>{company.status === 'paused' ? 'En pause' : company.status}</Badge>
+              <Badge variant={company.status === 'paused' ? 'destructive' : 'default'}>{company.status === 'paused' ? 'En pause' : (company.status || 'active')}</Badge>
             </div>
           </div>
           <div className="flex gap-2">

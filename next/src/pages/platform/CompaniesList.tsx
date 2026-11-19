@@ -70,6 +70,7 @@ const CompaniesList = () => {
       slug: newCompany.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
       crypto_id_code: newCompany.crypto_id_code ? newCompany.crypto_id_code.toUpperCase() : `NIC-${Date.now()}`,
       default_currency: newCompany.default_currency,
+      status: "active",
     }).select().single();
 
     if (companyError) {
@@ -266,8 +267,8 @@ const CompaniesList = () => {
                       </TableCell>
                       <TableCell>{company.default_currency}</TableCell>
                       <TableCell>
-                        <Badge variant={company.status === 'active' ? 'default' : 'secondary'}>
-                          {company.status}
+                        <Badge variant={company.status === 'paused' ? 'secondary' : 'default'}>
+                          {company.status || "active"}
                         </Badge>
                       </TableCell>
                       <TableCell className="text-sm text-muted-foreground">
