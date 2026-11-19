@@ -1,0 +1,131 @@
+{
+  "hero": {
+    "badge": "Plataforma segura y regulada",
+    "title": "Gestiona tus criptos con simplicidad y seguridad",
+    "subtitle": "Tu plataforma de confianza para la gestión de criptomonedas. Regístrate en minutos con verificación KYC rápida y empieza a gestionar tus activos digitales de forma segura.",
+    "cta": {
+      "createAccount": "Crear cuenta",
+      "signIn": "Iniciar sesión"
+    },
+    "trust": {
+      "ssl": "Cifrado SSL",
+      "assets": "20+ criptos soportadas",
+      "tracking": "Seguimiento 24/7",
+      "noFees": "Sin comisiones ocultas",
+      "instantVerification": "Verificación instantánea",
+      "bankSecurity": "Seguridad bancaria"
+    },
+    "preview": {
+      "totalPortfolio": "Cartera total",
+      "livePrices": "Precios en vivo",
+      "encryption": "Cifrado",
+      "activeUsers": "Usuarios activos"
+    }
+  },
+  "features": {
+    "badge": "Características principales",
+    "title": "Todo lo que necesitas para gestionar tus criptos",
+    "subtitle": "Nuestra plataforma ofrece todas las herramientas necesarias para una gestión segura de criptomonedas",
+    "kyc": {
+      "title": "Verificación KYC rápida",
+      "description": "Completa la verificación de identidad en minutos con nuestro proceso KYC simplificado. Simple, seguro y conforme."
+    },
+    "wallet": {
+      "title": "Gestión segura de billeteras",
+      "description": "Gestiona múltiples billeteras de criptomonedas desde un panel único y seguro con seguridad de nivel empresarial."
+    },
+    "tracking": {
+      "title": "Seguimiento de cartera en tiempo real",
+      "description": "Monitorea tus inversiones con actualizaciones de precios en vivo y análisis de rendimiento detallados en todos tus activos."
+    },
+    "access": {
+      "title": "Acceso 24/7",
+      "description": "Accede a tu cartera en cualquier momento y lugar. Nuestra plataforma está disponible las 24 horas con 99,9% de disponibilidad."
+    }
+  },
+  "stats": {
+    "users": "Usuarios activos",
+    "usersDesc": "Confían en nuestra plataforma",
+    "volume": "Activos gestionados",
+    "volumeDesc": "Almacenados de forma segura",
+    "countries": "Países",
+    "countriesDesc": "Cobertura mundial",
+    "uptime": "Disponibilidad",
+    "uptimeDesc": "Siempre disponible"
+  },
+  "howItWorks": {
+    "badge": "Proceso simple",
+    "title": "Comienza en 4 sencillos pasos",
+    "subtitle": "Desde el registro hasta la gestión de tu cartera, lo hacemos simple y seguro.",
+    "step": "Paso",
+    "step1": { "title": "Crear cuenta", "desc": "Regístrate en menos de 2 minutos con tu correo electrónico." },
+    "step2": { "title": "Verificar identidad", "desc": "Completa nuestro proceso KYC rápido con verificación instantánea." },
+    "step3": { "title": "Financiar tu billetera", "desc": "Deposita fondos de forma segura por transferencia bancaria o tarjeta." },
+    "step4": { "title": "Empezar a gestionar", "desc": "Sigue, gestiona y haz crecer tu cartera cripto fácilmente." },
+    "cta": "Comenzar ahora"
+  },
+  "testimonials": {
+    "badge": "Confianza de miles",
+    "title": "Lo que dicen nuestros usuarios",
+    "subtitle": "Únete a miles de usuarios satisfechos que confían en Coinly para su gestión cripto.",
+    "role1": "Inversor cripto",
+    "content1": "La mejor plataforma que he usado para gestionar mi cartera cripto. El proceso KYC fue increíblemente rápido y la interfaz es intuitiva.",
+    "role2": "Trader diario",
+    "content2": "Seguimiento de precios en tiempo real y gestión segura de billeteras. Todo lo que necesito en un solo lugar. ¡Muy recomendable!",
+    "role3": "Empresario",
+    "content3": "Plataforma profesional con seguridad de nivel bancario. El soporte al cliente es excelente y siempre receptivo."
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Encuentra respuestas a las preguntas comunes sobre Coinly.",
+    "q1": "¿Cuánto tarda la verificación KYC?",
+    "a1": "Nuestro proceso KYC suele tardar menos de 5 minutos. La mayoría de las verificaciones se completan al instante, aunque algunas pueden requerir hasta 24 horas para revisión manual.",
+    "q2": "¿Qué criptomonedas soportan?",
+    "a2": "Soportamos más de 20 criptomonedas principales incluyendo Bitcoin, Ethereum, USDT, BNB, Solana y muchas más. Añadimos nuevos activos regularmente según la demanda.",
+    "q3": "¿Qué tan seguras están mis criptos en su plataforma?",
+    "a3": "Usamos cifrado SSL de 256 bits de nivel bancario, almacenamiento en frío para la mayoría de activos y tecnología multi-firma. Sus fondos están protegidos por medidas de seguridad líderes en la industria.",
+    "q4": "¿Cuáles son las comisiones de Coinly?",
+    "a4": "Creemos en la transparencia. No hay comisiones ocultas. Todas las comisiones de transacción se muestran claramente antes de confirmar cualquier operación. La gestión de cuenta es gratuita.",
+    "q5": "¿Puedo acceder a mi cuenta desde cualquier lugar?",
+    "a5": "¡Sí! Coinly está accesible 24/7 desde cualquier dispositivo. Nuestra plataforma es totalmente responsive y funciona en escritorio, tablet y navegadores móviles."
+  },
+  "cta": {
+    "title": "¿Listo para comenzar tu viaje cripto?",
+    "subtitle": "Únete a miles de usuarios que confían en Coinly para la gestión segura de criptomonedas.",
+    "createAccount": "Crear cuenta gratuita",
+    "signIn": "Iniciar sesión",
+    "trust1": "Seguridad bancaria",
+    "trust2": "Verificación instantánea",
+    "trust3": "Soporte 24/7"
+  },
+  "trustedBy": {
+    "featuredIn": "Mencionado en publicaciones líderes",
+    "regulations": "Conforme con las regulaciones europeas"
+  },
+  "footer": {
+    "brand": "Coinly",
+    "description": "Tu plataforma de confianza para la gestión de criptomonedas con simplicidad y seguridad.",
+    "product": "Producto",
+    "legal": "Legal",
+    "terms": "Términos de servicio",
+    "privacy": "Política de privacidad",
+    "legalNotice": "Aviso legal",
+    "cookies": "Política de cookies",
+    "copyright": "© {{year}} Coinly. Todos los derechos reservados.",
+    "newsletter": { "title": "Mantente informado", "subtitle": "Recibe las últimas noticias y actualizaciones sobre los mercados cripto.", "placeholder": "Introduce tu email", "subscribe": "Suscribirse" },
+    "resources": "Recursos",
+    "documentation": "Documentación",
+    "apiReference": "Referencia API",
+    "helpCenter": "Centro de ayuda",
+    "allSystems": "Todos los sistemas operativos"
+  },
+  "header": {
+    "sslSecured": "SSL seguro",
+    "support247": "Soporte disponible 24/7",
+    "allSystems": "Todos los sistemas operativos",
+    "resources": "Recursos",
+    "documentation": "Documentación",
+    "apiReference": "Referencia API",
+    "helpCenter": "Centro de ayuda"
+  }
+}

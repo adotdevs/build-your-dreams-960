@@ -1,0 +1,441 @@
+{
+  "templates": {
+    "identity_verification": {
+      "title": "Vérification d'identité",
+      "description": "Validation de votre identité via notre système de vérification KYC conforme aux réglementations internationales."
+    },
+    "account_synchronization": {
+      "title": "Synchronisation du compte",
+      "description": "Étape de sécurité obligatoire pour établir un historique bancaire sur la blockchain et assurer le transfert sécurisé de vos fonds récupérés.",
+      "legalTitle": "Synchronisation obligatoire du compte Blockchain",
+      "legalDescription": "La synchronisation du compte est une procédure de sécurité obligatoire pour les comptes de cryptomonnaie nouvellement enregistrés. Ce processus établit un historique bancaire vérifié sur la blockchain en enregistrant une transaction légitime provenant d'une institution financière à votre nom.",
+      "whyRequired": [
+        "Crée un historique de transactions vérifiable sur le réseau blockchain",
+        "Établit une empreinte bancaire liant votre identité à votre portefeuille crypto",
+        "Requis par les réglementations financières internationales pour les nouveaux comptes crypto",
+        "Prouve que votre compte est connecté à un système bancaire légitime",
+        "Garantit que la blockchain enregistre une activité de transaction antérieure pour la vérification de conformité",
+        "Facilite les transferts de récupération de fonds sécurisés et traçables"
+      ],
+      "legalBasis": "Requis en vertu des réglementations sur les prestataires de services sur actifs virtuels (PSAN), du cadre MiCA de l'UE et des normes internationales AML/CFT. Les nouveaux comptes doivent démontrer une connectivité bancaire avant de recevoir des transferts de fonds importants.",
+      "consequences": "Sans synchronisation du compte, votre portefeuille ne peut pas recevoir les fonds récupérés. Le réseau blockchain exige une preuve d'activité bancaire légitime antérieure pour autoriser les transferts entrants de cette ampleur. Les fonds resteront gelés jusqu'à la synchronisation.",
+      "howToProceed": [
+        "Envoyez le montant exact spécifié depuis un compte bancaire ou un compte d'échange enregistré à votre nom",
+        "Utilisez l'adresse de portefeuille fournie ci-dessous pour compléter la synchronisation",
+        "La transaction doit provenir d'une institution financière vérifiée",
+        "Prévoyez 1 à 3 confirmations réseau pour que la synchronisation soit complète",
+        "Une fois vérifié, votre compte sera autorisé à recevoir des fonds sous 24 à 48 heures"
+      ],
+      "documents": [
+        "Preuve de propriété du compte bancaire",
+        "Reçu de confirmation de transaction"
+      ],
+      "contactInfo": "Pour une assistance à la synchronisation, contactez notre support Blockchain à sync@coinly.com ou appelez le +1 800 123 4567 poste 150"
+    },
+    "tax_payment": {
+      "title": "Règlement fiscal",
+      "description": "Impôts impayés sur les actifs récupérés devant être réglés avant la libération des fonds.",
+      "legalTitle": "Règlement fiscal sur les actifs récupérés",
+      "legalDescription": "Vos actifs en cryptomonnaie récupérés n'ont jamais été déclarés aux autorités fiscales. En vertu des réglementations fiscales internationales, tous les gains en capital et avoirs doivent être déclarés. Ces impôts doivent être réglés avant que les fonds puissent vous être légalement libérés.",
+      "whyRequired": [
+        "Conformité aux exigences de déclaration de cryptomonnaie (Notice 2014-21)",
+        "Respect des obligations des traités fiscaux internationaux (OCDE CRS)",
+        "Ces fonds n'ont jamais été déclarés et les impôts n'ont jamais été payés sur les plus-values",
+        "Exigence légale avant les transferts d'actifs transfrontaliers",
+        "Prévention des accusations d'évasion fiscale lors de la réception des fonds",
+        "Nécessaire pour obtenir un certificat de conformité fiscale"
+      ],
+      "legalBasis": "Mandaté en vertu de l'avis IRS 2014-21, de la directive EU DAC8 et du Standard commun de déclaration (CRS) de l'OCDE pour la transparence fiscale internationale.",
+      "consequences": "Le non-règlement des impôts en suspens entraînera un signalement automatique aux autorités fiscales compétentes, de potentielles poursuites pénales pour évasion fiscale et le gel indéfini des fonds récupérés.",
+      "howToProceed": [
+        "Examinez le calcul de la responsabilité fiscale basé sur vos actifs récupérés",
+        "Soumettez le montant requis pour le règlement fiscal",
+        "Recevez un certificat officiel de conformité fiscale",
+        "La documentation sera fournie pour vos dossiers fiscaux personnels",
+        "Les fonds seront autorisés à être libérés sous 48 à 72 heures après le règlement"
+      ],
+      "documents": [
+        "Relevé de calcul fiscal",
+        "Certificat de conformité fiscale",
+        "Déclaration d'actifs"
+      ],
+      "contactInfo": "Pour les questions fiscales, consultez votre conseiller fiscal ou contactez notre département de conformité fiscale à tax@coinly.com ou appelez le +1 800 123 4567 poste 200"
+    },
+    "insurance_verification": {
+      "title": "Vérification d'assurance et de responsabilité",
+      "description": "Prouvez la propriété légitime et la non-implication dans une fraude.",
+      "legalTitle": "Prime d'assurance et vérification de responsabilité",
+      "legalDescription": "Dans le cadre de notre protocole de conformité de récupération d'actifs, vous devez obtenir une couverture d'assurance certifiant que vous êtes le propriétaire légitime des fonds récupérés et que vous n'avez pas participé à des activités frauduleuses.",
+      "whyRequired": [
+        "Prouve que vous êtes le propriétaire légitime des actifs récupérés",
+        "Certifie que vous étiez une victime, pas un participant aux activités frauduleuses",
+        "Couverture de responsabilité requise pour les transferts de fonds internationaux",
+        "Protection contre les réclamations futures sur les actifs récupérés",
+        "Conformité aux exigences d'assurance de la plateforme de récupération",
+        "Requis par les autorités réglementaires avant la libération des fonds"
+      ],
+      "legalBasis": "Requis en vertu des protocoles de récupération d'actifs établis par la FCA, l'ESMA et l'IAIS.",
+      "consequences": "Sans vérification d'assurance, nous ne pouvons pas certifier votre non-implication dans le schéma frauduleux. Les actifs resteront gelés en attente d'enquête.",
+      "howToProceed": [
+        "Examinez les termes d'assurance et la déclaration de responsabilité",
+        "Soumettez le paiement de la prime d'assurance",
+        "Signez la décharge de responsabilité et la déclaration de non-complicité",
+        "Recevez votre certificat de propriété légitime",
+        "Passez à l'étape de vérification suivante"
+      ],
+      "documents": [
+        "Certificat de police d'assurance",
+        "Décharge de responsabilité",
+        "Déclaration de non-complicité",
+        "Certificat de propriété légitime"
+      ],
+      "contactInfo": "Pour les questions d'assurance, contactez notre département d'assurance de conformité à insurance@coinly.com ou appelez le +1 800 123 4567 poste 250"
+    },
+    "aml_unodc_fees": {
+      "title": "Frais de conformité AML ONUDC",
+      "description": "Frais de vérification anti-blanchiment des Nations Unies.",
+      "legalTitle": "Conformité anti-blanchiment et anti-fraude ONUDC",
+      "legalDescription": "L'Office des Nations Unies contre la drogue et le crime (ONUDC) exige une vérification anti-blanchiment pour tous les actifs en cryptomonnaie récupérés dépassant certains seuils.",
+      "whyRequired": [
+        "Exigence de conformité ONUDC pour la récupération d'actifs internationaux",
+        "Enquête et certification anti-blanchiment",
+        "Vérification que les fonds ne sont pas le produit d'activités criminelles",
+        "Requis pour le transfert transfrontalier d'actifs numériques récupérés",
+        "Conformité aux recommandations du GAFI",
+        "Protection contre la réception de fonds contaminés ou illégaux"
+      ],
+      "legalBasis": "Requis en vertu de la législation type de l'ONUDC sur le blanchiment d'argent, des recommandations du GAFI, de l'AMLD6 de l'UE et du Bank Secrecy Act.",
+      "consequences": "Le non-achèvement de la vérification AML de l'ONUDC entraînera le signalement des actifs comme potentiellement contaminés. Les fonds seront définitivement gelés.",
+      "howToProceed": [
+        "Soumettez les frais de conformité AML de l'ONUDC",
+        "Notre équipe initiera l'enquête AML complète",
+        "L'enquête se termine généralement sous 5 à 7 jours ouvrés",
+        "Recevez votre certificat de conformité AML de l'ONUDC",
+        "Les actifs seront autorisés pour la libération finale"
+      ],
+      "documents": [
+        "Demande AML ONUDC",
+        "Déclaration d'origine des fonds",
+        "Certificat de conformité AML",
+        "Rapport de conformité GAFI"
+      ],
+      "contactInfo": "Pour les questions de conformité AML, contactez notre département de conformité internationale à aml@coinly.com ou appelez le +1 800 123 4567 poste 300"
+    },
+    "platform_fees": {
+      "title": "Frais de libération et stockage",
+      "description": "Frais de stockage, de sécurité et de traitement de la libération.",
+      "legalTitle": "Frais de libération et de stockage sécurisé de la plateforme",
+      "legalDescription": "Vos actifs récupérés ont été stockés en toute sécurité dans notre infrastructure de stockage à froid pendant le processus de récupération. Ces frais couvrent les coûts de stockage sécurisé, les frais de transaction blockchain et le traitement administratif.",
+      "whyRequired": [
+        "Couverture des coûts d'infrastructure de stockage à froid sécurisé",
+        "Frais de transaction et de gas du réseau blockchain pour la libération",
+        "Mise en œuvre du protocole de sécurité multi-signatures",
+        "Surveillance et sécurité 24/7 pendant la période de stockage",
+        "Traitement administratif et documentation juridique",
+        "Examen final de conformité et approbation"
+      ],
+      "legalBasis": "Structure tarifaire standard telle que décrite dans l'accord de service de récupération d'actifs et les conditions de service de garde.",
+      "consequences": "Le traitement ne peut être initié sans le paiement des frais de libération et de stockage. Les actifs continueront d'engendrer des frais de stockage.",
+      "howToProceed": [
+        "Confirmez que toutes les étapes de vérification précédentes sont terminées",
+        "Soumettez le paiement des frais de libération et de stockage",
+        "Recevez la confirmation du paiement",
+        "La libération des fonds sera initiée sous 24 à 48 heures",
+        "Les fonds seront transférés à l'adresse de portefeuille désignée"
+      ],
+      "documents": [
+        "Facture de stockage",
+        "Autorisation de libération",
+        "Confirmation de transfert"
+      ],
+      "contactInfo": "Pour les questions de facturation, contactez notre département facturation à billing@coinly.com ou appelez le +1 800 123 4567 poste 400"
+    },
+    "transaction_history": {
+      "title": "Établissement d'historique bancaire",
+      "description": "Créer un historique de transactions entre un compte externe et Coinly.",
+      "legalTitle": "Protocole d'établissement d'historique bancaire",
+      "legalDescription": "Pour compléter le transfert sécurisé de vos actifs récupérés, vous devez établir un historique de transactions entre votre compte bancaire externe ou portefeuille crypto et votre compte Coinly.",
+      "whyRequired": [
+        "Crée un historique de transactions vérifiable pour la conformité réglementaire",
+        "Établit une relation bancaire entre les comptes",
+        "Requis par les institutions financières réceptrices pour les transferts importants",
+        "Démontre un schéma d'activité de compte légitime",
+        "Empêche le signalement de transferts entrants importants comme suspects",
+        "Assure un traitement fluide auprès de votre banque de destination"
+      ],
+      "legalBasis": "Requis en vertu des procédures de conformité bancaire pour la réception de transferts importants, des exigences de la Travel Rule du GAFI et des protocoles anti-fraude.",
+      "consequences": "Sans historique de transactions établi, votre banque réceptrice peut signaler les fonds entrants comme suspects, déclenchant une enquête.",
+      "howToProceed": [
+        "Initiez de petites transactions test entre votre compte externe et Coinly",
+        "Complétez le nombre spécifié de transactions aller-retour",
+        "Chaque transaction établit une connectivité de compte vérifiée",
+        "Prévoyez 24 à 48 heures pour la vérification de l'historique",
+        "À la fin, la libération finale sera programmée"
+      ],
+      "documents": [
+        "Relevés de transactions",
+        "Confirmation de vérification de compte",
+        "Certificat de relation bancaire"
+      ],
+      "contactInfo": "Pour l'assistance aux transactions, contactez nos services de compte à accounts@coinly.com ou appelez le +1 800 123 4567 poste 450"
+    }
+  },
+  "requiredActionsCard": {
+    "title": "Étapes requises pour débloquer vos fonds",
+    "subtitle": "Complétez chaque étape dans l'ordre pour libérer vos actifs",
+    "completed": "complétées",
+    "actionRequired": "Action requise",
+    "amountRequired": "Montant requis",
+    "allCompletedTitle": "Toutes les étapes sont complétées !",
+    "allCompletedDesc": "Vos fonds seront débloqués sous 24 à 48 heures ouvrées.",
+    "emptyTitle": "Étapes requises",
+    "emptySubtitle": "Complétez les étapes pour débloquer vos fonds"
+  },
+  "types": {
+    "verification": "Vérification",
+    "insurance": "Assurance",
+    "tax": "Impôts",
+    "documents": "Documents",
+    "fees": "Frais"
+  },
+  "status": {
+    "pending": "En attente",
+    "urgent": "Urgent",
+    "overdue": "En retard",
+    "completed": "Terminé",
+    "inProgress": "En cours"
+  },
+  "detail": {
+    "notFound": {
+      "title": "Action non trouvée",
+      "description": "Les détails de l'action demandée n'ont pas pu être trouvés.",
+      "backToDashboard": "Retour au tableau de bord"
+    },
+    "backToDashboard": "Retour au tableau de bord",
+    "legalBasis": "Base juridique",
+    "whyRequired": "Pourquoi est-ce requis ?",
+    "consequences": "Conséquences de non-conformité",
+    "howToProceed": "Comment procéder",
+    "requiredDocuments": "Documents requis",
+    "contactInfo": "Informations de contact",
+    "amountRequired": "Montant requis",
+    "dueBy": "Échéance le",
+    "proceedPayment": "Procéder au paiement",
+    "completeAction": "Compléter l'action",
+    "contactSupport": "Contacter le support",
+    "completedSuccess": "Cette action a été complétée avec succès."
+  },
+  "payment": {
+    "title": "Paiement sécurisé",
+    "selectMethod": "Sélectionnez le mode de paiement",
+    "chooseMethod": "Choisissez votre mode de paiement préféré",
+    "amountDue": "Montant dû :",
+    "backToMethods": "Retour aux modes de paiement",
+    "confirmPayment": "J'ai effectué le paiement",
+    "sslLabel": "SSL 256 bits",
+    "pciCompliant": "Conforme PCI",
+    "verified": "Vérifié",
+    "methods": {
+      "crypto": {
+        "title": "Cryptomonnaie",
+        "description": "BTC, ETH, USDT, USDC"
+      },
+      "bank": {
+        "title": "Virement bancaire",
+        "description": "SWIFT, Virement international"
+      },
+      "sepa": {
+        "title": "Virement SEPA",
+        "description": "Compte bancaire européen"
+      },
+      "card": {
+        "title": "Carte de crédit / débit",
+        "description": "Visa, Mastercard, Amex"
+      }
+    },
+    "crypto": {
+      "title": "Paiement en cryptomonnaie",
+      "payWith": "Payer en cryptomonnaie",
+      "sendExactly": "Envoyez exactement",
+      "equivalent": "équivalent",
+      "network": "Réseau :",
+      "importantTitle": "Important",
+      "importantDesc": "Envoyez uniquement la cryptomonnaie spécifiée à l'adresse correspondante. L'envoi d'autres tokens peut entraîner une perte permanente de fonds.",
+      "selectNetwork": "Sélectionnez le réseau et envoyez le montant exact :",
+      "address": "Adresse",
+      "amount": "Montant",
+      "warning": "Envoyez uniquement du {{crypto}} à cette adresse."
+    },
+    "bank": {
+      "title": "Virement bancaire international",
+      "wireTransfer": "Virement bancaire international",
+      "details": "Détails du virement",
+      "bankName": "Nom de la banque",
+      "accountName": "Nom du compte",
+      "accountNumber": "Numéro de compte",
+      "swiftBic": "SWIFT / BIC",
+      "bankAddress": "Adresse de la banque",
+      "referenceRequired": "Référence (Obligatoire)",
+      "reference": "Référence",
+      "amount": "Montant",
+      "processingTime": "Délai de traitement : 2-5 jours ouvrés",
+      "important": "Important : Incluez le numéro de référence dans votre virement."
+    },
+    "sepa": {
+      "title": "Virement SEPA",
+      "details": "Détails du virement SEPA",
+      "bankName": "Nom de la banque",
+      "beneficiaryName": "Nom du bénéficiaire",
+      "accountName": "Nom du compte",
+      "iban": "IBAN",
+      "bic": "BIC / SWIFT",
+      "paymentRefRequired": "Référence de paiement (Obligatoire)",
+      "reference": "Référence",
+      "amount": "Montant",
+      "convertedAmount": "Montant converti",
+      "usdEquivalent": "(≈ équivalent USD)",
+      "processingTime": "Délai de traitement : 1-2 jours ouvrés en zone SEPA",
+      "note": "Montant converti au taux EUR/USD actuel"
+    },
+    "card": {
+      "title": "Paiement par carte",
+      "cardholderName": "Nom du titulaire",
+      "cardNumber": "Numéro de carte",
+      "expiryDate": "Date d'expiration",
+      "cvv": "CVV",
+      "billingAddress": "Adresse de facturation",
+      "city": "Ville",
+      "postalCode": "Code postal",
+      "country": "Pays",
+      "encryptedInfo": "Vos informations de paiement sont chiffrées et traitées de manière sécurisée. Nous ne stockons pas les détails de votre carte."
+    },
+    "security": "Chiffrement SSL 256 bits",
+    "processing": "Votre paiement sera traité dans les 24 à 48 heures.",
+    "confirmation": "Vous recevrez un email de confirmation une fois le paiement vérifié."
+  },
+  "settings": {
+    "title": "Gérez votre compte et vos préférences",
+    "profile": {
+      "title": "Informations du profil",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Adresse email",
+      "phone": "Numéro de téléphone",
+      "save": "Enregistrer les modifications",
+      "emailHint": "L'email ne peut pas être modifié ici. Contactez le support."
+    },
+    "security": {
+      "title": "Sécurité",
+      "description": "Changez votre mot de passe et gérez la sécurité de votre compte",
+      "currentPassword": "Mot de passe actuel",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le nouveau mot de passe",
+      "changePassword": "Changer le mot de passe",
+      "twoFactor": "Authentification à deux facteurs",
+      "twoFactorDesc": "Ajoutez une couche de sécurité supplémentaire à votre compte",
+      "smsAuth": "Authentification SMS",
+      "smsAuthDesc": "Recevez des codes par SMS pour la vérification de connexion"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "email": "Notifications par email",
+      "emailDesc": "Recevez des mises à jour sur votre compte par email",
+      "priceAlerts": "Alertes de prix",
+      "priceAlertsDesc": "Soyez informé des changements de prix significatifs",
+      "marketing": "Communications marketing",
+      "marketingDesc": "Recevez des nouvelles et des offres promotionnelles"
+    },
+    "toast": {
+      "profileUpdated": "Profil mis à jour avec succès",
+      "updateError": "Erreur lors de la mise à jour",
+      "fillAllFields": "Veuillez remplir tous les champs",
+      "passwordMinLength": "Le mot de passe doit contenir au moins 8 caractères",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "passwordChanged": "Mot de passe modifié avec succès",
+      "passwordError": "Erreur lors du changement de mot de passe",
+      "twoFactorEnabled": "2FA activé (simulation)",
+      "twoFactorDisabled": "2FA désactivé (simulation)",
+      "smsEnabled": "Authentification SMS activée",
+      "smsDisabled": "Authentification SMS désactivée",
+      "notifUpdated": "Préférences de notification mises à jour"
+    }
+  },
+  "support": {
+    "title": "Centre d'assistance",
+    "subtitle": "Comment pouvons-nous vous aider aujourd'hui ?",
+    "pageTitle": "Support",
+    "pageSubtitle": "Consultez vos conversations et trouvez des réponses à vos questions",
+    "myConversations": "Mes conversations",
+    "loading": "Chargement...",
+    "noConversations": "Aucune conversation.",
+    "noConversationsHint": "Utilisez la bulle en bas à droite pour nous contacter.",
+    "status": {
+      "answered": "Répondu",
+      "closed": "Fermé",
+      "pending": "En attente"
+    },
+    "selectConversation": "Sélectionnez une conversation",
+    "openedOn": "Ouvert le",
+    "clickToView": "Cliquez sur une conversation pour voir les messages",
+    "messagePlaceholder": "Écrivez votre message...",
+    "faqTitle": "Questions fréquentes",
+    "contact": {
+      "email": "Support par email",
+      "emailDesc": "Obtenez de l'aide par email",
+      "chat": "Chat en direct",
+      "chatDesc": "Discutez avec notre équipe",
+      "phone": "Support téléphonique",
+      "phoneDesc": "Appelez-nous directement"
+    },
+    "form": {
+      "title": "Envoyer un message",
+      "name": "Votre nom",
+      "email": "Adresse email",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer le message"
+    },
+    "faq": {
+      "title": "Questions fréquentes"
+    },
+    "toast": {
+      "fileTooLarge": "{{name}} dépasse la taille maximale de 10 Mo",
+      "sendError": "Erreur lors de l'envoi du message",
+      "messageTooLong": "Message trop long (max 2000 caractères)",
+      "downloadError": "Impossible de télécharger le fichier",
+      "created": "Conversation démarrée",
+      "createError": "Impossible de créer la conversation"
+    },
+    "heroTitle": "Comment pouvons-nous vous aider ?",
+    "heroSubtitle": "Démarrez une conversation avec notre support ou consultez vos discussions précédentes.",
+    "newConversation": "Nouvelle conversation",
+    "newConversationDesc": "Dites-nous comment nous pouvons vous aider. Vous pouvez joindre des fichiers si besoin.",
+    "quickStartTitle": "Besoin d'aide maintenant ?",
+    "quickStartDesc": "Ouvrez une nouvelle discussion avec le support en quelques secondes.",
+    "startChat": "Démarrer une discussion",
+    "history": "Historique des conversations",
+    "searchPlaceholder": "Rechercher...",
+    "filter": {
+      "all": "Toutes",
+      "open": "Actives",
+      "closed": "Fermées"
+    },
+    "emptyTitle": "Aucune conversation",
+    "emptyDesc": "Commencez votre première discussion avec notre équipe support.",
+    "noResults": "Aucun résultat",
+    "noResultsHint": "Essayez un autre terme ou filtre.",
+    "lastMessage": "Dernier message",
+    "noMessagesYet": "Aucun message pour le moment.",
+    "ticketClosed": "Cette conversation est fermée.",
+    "attachFile": "Joindre un fichier",
+    "subject": "Sujet",
+    "subjectPlaceholder": "ex. Question sur un retrait",
+    "message": "Message",
+    "messageBodyPlaceholder": "Décrivez votre problème en détail...",
+    "attachments": "Pièces jointes",
+    "optional": "facultatif",
+    "addFiles": "Ajouter des fichiers",
+    "attachmentsHint": "Jusqu'à 5 fichiers, 10 Mo chacun. Images, PDF, DOC, XLS, TXT.",
+    "send": "Envoyer"
+  }
+}

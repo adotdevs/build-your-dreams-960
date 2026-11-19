@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Plataforma segura e regulamentada",
+    "title": "Gerencie suas criptos com simplicidade e segurança",
+    "subtitle": "Sua plataforma de confiança para gestão de criptomoedas. Cadastre-se em minutos com verificação KYC rápida e comece a gerenciar seus ativos digitais com segurança.",
+    "cta": { "createAccount": "Criar conta", "signIn": "Entrar" },
+    "trust": {
+      "ssl": "Criptografia SSL",
+      "assets": "20+ criptos suportadas",
+      "tracking": "Rastreamento 24/7",
+      "noFees": "Sem taxas ocultas",
+      "instantVerification": "Verificação instantânea",
+      "bankSecurity": "Segurança bancária"
+    },
+    "preview": { "totalPortfolio": "Portfólio total", "livePrices": "Preços ao vivo", "encryption": "Criptografia", "activeUsers": "Usuários ativos" }
+  },
+  "features": {
+    "badge": "Recursos principais",
+    "title": "Tudo o que você precisa para gerenciar suas criptos",
+    "subtitle": "Nossa plataforma oferece todas as ferramentas necessárias para uma gestão segura de criptomoedas",
+    "kyc": { "title": "Verificação KYC rápida", "description": "Complete a verificação de identidade em minutos com nosso processo KYC simplificado. Simples, seguro e em conformidade." },
+    "wallet": { "title": "Gestão segura de carteiras", "description": "Gerencie várias carteiras de criptomoedas a partir de um painel único e seguro com segurança empresarial." },
+    "tracking": { "title": "Rastreamento de portfólio em tempo real", "description": "Monitore seus investimentos com atualizações de preços ao vivo e análises de desempenho detalhadas em todos os seus ativos." },
+    "access": { "title": "Acesso 24/7", "description": "Acesse seu portfólio a qualquer momento, em qualquer lugar. Nossa plataforma está disponível 24 horas com 99,9% de disponibilidade." }
+  },
+  "stats": { "users": "Usuários ativos", "usersDesc": "Confiam em nossa plataforma", "volume": "Ativos gerenciados", "volumeDesc": "Armazenados com segurança", "countries": "Países", "countriesDesc": "Cobertura mundial", "uptime": "Disponibilidade", "uptimeDesc": "Sempre disponível" },
+  "howItWorks": {
+    "badge": "Processo simples", "title": "Comece em 4 passos fáceis", "subtitle": "Do cadastro à gestão do seu portfólio, tornamos tudo simples e seguro.", "step": "Passo",
+    "step1": { "title": "Criar conta", "desc": "Cadastre-se em menos de 2 minutos com seu e-mail." },
+    "step2": { "title": "Verificar identidade", "desc": "Complete nosso processo KYC rápido com verificação instantânea." },
+    "step3": { "title": "Financiar sua carteira", "desc": "Deposite fundos com segurança via transferência bancária ou cartão." },
+    "step4": { "title": "Começar a gerenciar", "desc": "Acompanhe, gerencie e faça crescer seu portfólio cripto facilmente." },
+    "cta": "Começar agora"
+  },
+  "testimonials": {
+    "badge": "Confiança de milhares", "title": "O que nossos usuários dizem", "subtitle": "Junte-se a milhares de usuários satisfeitos que confiam no Coinly para sua gestão cripto.",
+    "role1": "Investidor cripto", "content1": "A melhor plataforma que já usei para gerenciar meu portfólio cripto. O processo KYC foi incrivelmente rápido e a interface é intuitiva.",
+    "role2": "Trader diário", "content2": "Rastreamento de preços em tempo real e gestão segura de carteiras. Tudo o que preciso em um só lugar. Recomendo muito!",
+    "role3": "Empresário", "content3": "Plataforma profissional com segurança bancária. O suporte ao cliente é excelente e sempre responsivo."
+  },
+  "faq": {
+    "title": "Perguntas frequentes", "subtitle": "Encontre respostas para perguntas comuns sobre o Coinly.",
+    "q1": "Quanto tempo leva a verificação KYC?", "a1": "Nosso processo KYC geralmente leva menos de 5 minutos. A maioria das verificações é concluída instantaneamente, embora algumas possam levar até 24 horas para revisão manual.",
+    "q2": "Quais criptomoedas vocês suportam?", "a2": "Suportamos mais de 20 criptomoedas principais incluindo Bitcoin, Ethereum, USDT, BNB, Solana e muitas outras. Adicionamos novos ativos regularmente com base na demanda.",
+    "q3": "Quão seguras estão minhas criptos na plataforma?", "a3": "Usamos criptografia SSL de 256 bits de nível bancário, armazenamento a frio para a maioria dos ativos e tecnologia multi-assinatura. Seus fundos são protegidos por medidas de segurança líderes do setor.",
+    "q4": "Quais são as taxas do Coinly?", "a4": "Acreditamos na transparência. Não há taxas ocultas. Todas as taxas de transação são claramente exibidas antes de confirmar qualquer operação. A gestão da conta é gratuita.",
+    "q5": "Posso acessar minha conta de qualquer lugar?", "a5": "Sim! O Coinly está acessível 24/7 de qualquer dispositivo. Nossa plataforma é totalmente responsiva e funciona em desktop, tablet e navegadores móveis."
+  },
+  "cta": { "title": "Pronto para começar sua jornada cripto?", "subtitle": "Junte-se a milhares de usuários que confiam no Coinly para gestão segura de criptomoedas.", "createAccount": "Criar conta gratuita", "signIn": "Entrar", "trust1": "Segurança bancária", "trust2": "Verificação instantânea", "trust3": "Suporte 24/7" },
+  "trustedBy": { "featuredIn": "Mencionado em publicações líderes", "regulations": "Em conformidade com regulamentações europeias" },
+  "footer": {
+    "brand": "Coinly", "description": "Sua plataforma de confiança para gestão de criptomoedas com simplicidade e segurança.",
+    "product": "Produto", "legal": "Legal", "terms": "Termos de serviço", "privacy": "Política de privacidade", "legalNotice": "Aviso legal", "cookies": "Política de cookies",
+    "copyright": "© {{year}} Coinly. Todos os direitos reservados.",
+    "newsletter": { "title": "Fique atualizado", "subtitle": "Receba as últimas notícias e atualizações sobre os mercados cripto.", "placeholder": "Digite seu e-mail", "subscribe": "Inscrever-se" },
+    "resources": "Recursos", "documentation": "Documentação", "apiReference": "Referência API", "helpCenter": "Central de ajuda", "allSystems": "Todos os sistemas operacionais"
+  },
+  "header": { "sslSecured": "SSL seguro", "support247": "Suporte disponível 24/7", "allSystems": "Todos os sistemas operacionais", "resources": "Recursos", "documentation": "Documentação", "apiReference": "Referência API", "helpCenter": "Central de ajuda" }
+}

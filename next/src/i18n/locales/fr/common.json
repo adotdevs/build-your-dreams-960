@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "security": "Sécurité",
+    "dashboard": "Tableau de bord",
+    "wallet": "Portefeuille",
+    "transactions": "Transactions",
+    "settings": "Paramètres",
+    "support": "Support",
+    "bankWithdrawal": "Retrait bancaire",
+    "signIn": "Connexion",
+    "signOut": "Déconnexion",
+    "createAccount": "Créer un compte"
+  },
+  "buttons": {
+    "send": "Envoyer",
+    "receive": "Recevoir",
+    "deposit": "Déposer",
+    "withdraw": "Retirer",
+    "continue": "Continuer",
+    "skip": "Passer",
+    "back": "Retour",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "submit": "Soumettre",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "filter": "Filtrer",
+    "viewDetails": "Voir les détails",
+    "proceedToPayment": "Procéder au paiement",
+    "contactSupport": "Contacter le support",
+    "backToMethods": "Retour aux méthodes de paiement",
+    "paymentMade": "J'ai effectué le paiement"
+  },
+  "status": {
+    "verified": "Vérifié",
+    "pending": "En attente",
+    "completed": "Terminé",
+    "blocked": "Bloqué",
+    "active": "Actif",
+    "inactive": "Inactif",
+    "done": "Terminé"
+  },
+  "of": "sur",
+  "time": {
+    "today": "Aujourd'hui",
+    "yesterday": "Hier",
+    "daysAgo": "Il y a {{count}} jours"
+  },
+  "currency": {
+    "usd": "USD",
+    "eur": "EUR"
+  },
+  "errors": {
+    "required": "Ce champ est obligatoire",
+    "invalidEmail": "Adresse email invalide",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "minLength": "Minimum {{count}} caractères requis"
+  }
+}

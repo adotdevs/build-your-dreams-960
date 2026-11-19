@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "security": "Security",
+    "dashboard": "Dashboard",
+    "wallet": "Wallet",
+    "transactions": "Transactions",
+    "settings": "Settings",
+    "support": "Support",
+    "bankWithdrawal": "Bank Withdrawal",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "createAccount": "Create Account"
+  },
+  "buttons": {
+    "send": "Send",
+    "receive": "Receive",
+    "deposit": "Deposit",
+    "withdraw": "Withdraw",
+    "continue": "Continue",
+    "skip": "Skip",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "submit": "Submit",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "filter": "Filter",
+    "viewDetails": "View Details",
+    "proceedToPayment": "Proceed to Payment",
+    "contactSupport": "Contact Support",
+    "backToMethods": "Back to payment methods",
+    "paymentMade": "I've Made the Payment"
+  },
+  "status": {
+    "verified": "Verified",
+    "pending": "Pending",
+    "completed": "Completed",
+    "blocked": "Blocked",
+    "active": "Active",
+    "inactive": "Inactive",
+    "done": "Done"
+  },
+  "of": "of",
+  "time": {
+    "today": "Today",
+    "yesterday": "Yesterday",
+    "daysAgo": "{{count}} days ago"
+  },
+  "currency": {
+    "usd": "USD",
+    "eur": "EUR"
+  },
+  "errors": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email address",
+    "passwordMismatch": "Passwords do not match",
+    "minLength": "Minimum {{count}} characters required"
+  }
+}

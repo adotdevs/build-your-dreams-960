@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "features": "Características",
+    "security": "Seguridad",
+    "dashboard": "Panel",
+    "wallet": "Billetera",
+    "transactions": "Transacciones",
+    "settings": "Configuración",
+    "support": "Soporte",
+    "bankWithdrawal": "Retiro bancario",
+    "signIn": "Iniciar sesión",
+    "signOut": "Cerrar sesión",
+    "createAccount": "Crear cuenta"
+  },
+  "buttons": {
+    "send": "Enviar",
+    "receive": "Recibir",
+    "deposit": "Depositar",
+    "withdraw": "Retirar",
+    "continue": "Continuar",
+    "skip": "Omitir",
+    "back": "Volver",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "submit": "Enviar",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "filter": "Filtrar",
+    "viewDetails": "Ver detalles",
+    "proceedToPayment": "Proceder al pago",
+    "contactSupport": "Contactar soporte",
+    "backToMethods": "Volver a métodos de pago",
+    "paymentMade": "He realizado el pago"
+  },
+  "status": {
+    "verified": "Verificado",
+    "pending": "Pendiente",
+    "completed": "Completado",
+    "blocked": "Bloqueado",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "done": "Hecho"
+  },
+  "of": "de",
+  "time": {
+    "today": "Hoy",
+    "yesterday": "Ayer",
+    "daysAgo": "Hace {{count}} días"
+  },
+  "currency": {
+    "usd": "USD",
+    "eur": "EUR"
+  },
+  "errors": {
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Dirección de correo inválida",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "minLength": "Mínimo {{count}} caracteres requeridos"
+  }
+}
