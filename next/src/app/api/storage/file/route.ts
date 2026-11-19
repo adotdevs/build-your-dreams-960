@@ -1,18 +1,8 @@
 import { readFile } from "fs/promises";
-import path from "path";
 import { NextResponse } from "next/server";
 import { readSignedFile } from "@/server/storage";
 
 export const dynamic = "force-dynamic";
-
-const TYPES: Record<string, string> = {
-  ".png": "image/png",
-  ".jpg": "image/jpeg",
-  ".jpeg": "image/jpeg",
-  ".webp": "image/webp",
-  ".pdf": "application/pdf",
-  ".gif": "image/gif",
-};
 
 export async function GET(request: Request) {
   try {
@@ -23,10 +13,10 @@ export async function GET(request: Request) {
     const sig = url.searchParams.get("sig") || "";
     const file = await readSignedFile(bucket, filePath, exp, sig);
     if (!file) return new NextResponse("Not found", { status: 404 });
-    const bytes = await readFile(file.full);
-    return new NextResponse(bytes, {
+    const body = "stream" in file && file.stream ? file.stream : await readFile(file.full);
+    return new NextResponse(body, {
       headers: {
-        "Content-Type": TYPES[path.extname(file.full).toLowerCase()] || "application/octet-stream",
+        "Content-Type": file.contentType,
         "Cache-Control": "private, max-age=60",
       },
     });

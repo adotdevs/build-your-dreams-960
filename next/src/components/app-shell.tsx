@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import NextTopLoader from "nextjs-toploader";
 import RequestBar from "@/components/request-bar";
 import { AuthProvider } from "@/hooks/useAuth";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,14 +16,6 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <NextTopLoader
-        color="#0c64f3"
-        height={3}
-        showSpinner={false}
-        shadow="0 0 10px #0c64f3,0 0 5px #0c64f3"
-        crawlSpeed={200}
-        speed={200}
-      />
       <RequestBar />
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
