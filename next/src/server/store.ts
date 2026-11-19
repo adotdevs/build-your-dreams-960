@@ -185,9 +185,11 @@ function sortRows(rows: Record<string, unknown>[], order: Order[] = []) {
   if (!order.length) return rows;
   return [...rows].sort((a, b) => {
     for (const item of order) {
-      const left = a[item.field];
-      const right = b[item.field];
+      const left = a[item.field] as string | number | null | undefined;
+      const right = b[item.field] as string | number | null | undefined;
       if (left === right) continue;
+      if (left == null) return item.ascending === false ? 1 : -1;
+      if (right == null) return item.ascending === false ? -1 : 1;
       const cmp = left > right ? 1 : -1;
       return item.ascending === false ? -cmp : cmp;
     }

@@ -172,7 +172,7 @@ const cryptoIdMap: { [key: string]: string } = {
 };
 
 // Formatting helpers for fiscal data
-const formatOccupation = (value: string | null): string => {
+const formatOccupation = (value: string | null | undefined): string => {
   const map: Record<string, string> = {
     employed: "Employed",
     self_employed: "Self-employed",
@@ -189,7 +189,7 @@ const formatOccupation = (value: string | null): string => {
   return value ? map[value] || value : "";
 };
 
-const formatIncomeRange = (value: string | null): string => {
+const formatIncomeRange = (value: string | null | undefined): string => {
   const map: Record<string, string> = {
     "0-15000": "< €15,000",
     "15000-30000": "€15,000 - €30,000",
@@ -203,7 +203,7 @@ const formatIncomeRange = (value: string | null): string => {
   return value ? map[value] || value : "";
 };
 
-const formatWealthRange = (value: string | null): string => {
+const formatWealthRange = (value: string | null | undefined): string => {
   const map: Record<string, string> = {
     "0-50000": "< €50,000",
     "50000-150000": "€50,000 - €150,000",
@@ -215,7 +215,7 @@ const formatWealthRange = (value: string | null): string => {
   return value ? map[value] || value : "";
 };
 
-const formatFundSource = (value: string | null): string => {
+const formatFundSource = (value: string | null | undefined): string => {
   const map: Record<string, string> = {
     salary: "Salary / Professional Income",
     savings: "Personal Savings",
@@ -228,7 +228,7 @@ const formatFundSource = (value: string | null): string => {
   return value ? map[value] || value : "";
 };
 
-const formatInvestmentExp = (value: string | null): string => {
+const formatInvestmentExp = (value: string | null | undefined): string => {
   const map: Record<string, string> = {
     none: "None",
     beginner: "Beginner (< 1 year)",
@@ -239,7 +239,7 @@ const formatInvestmentExp = (value: string | null): string => {
   return value ? map[value] || value : "";
 };
 
-const formatCryptoExp = (value: string | null): string => {
+const formatCryptoExp = (value: string | null | undefined): string => {
   const map: Record<string, string> = {
     never: "Never invested",
     occasional: "Occasional",
@@ -999,7 +999,8 @@ const ClientDetail = () => {
   };
 
   // Handle updating existing action (full content editor)
-  const handleUpdateActionContent = async (data: Partial<typeof editingAction>) => {
+  const handleUpdateActionContent = async (data: Partial<RequiredAction> | null) => {
+    if (!data) return;
     if (!client || !editingAction) return;
 
     setIsSaving(true);

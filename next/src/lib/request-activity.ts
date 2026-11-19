@@ -11,7 +11,9 @@ function notify() {
 export function subscribeRequests(listener: Listener) {
   listeners.add(listener);
   listener(pending);
-  return () => listeners.delete(listener);
+  return () => {
+    listeners.delete(listener);
+  };
 }
 
 function requestUrl(input: RequestInfo | URL) {

@@ -227,7 +227,7 @@ class StorageBucket {
 }
 
 type LiveListener = {
-  filter: { event?: string; table?: string; filter?: string };
+  filter: { event?: string; schema?: string; table?: string; filter?: string };
   cb: (payload: { new: unknown; old: unknown; eventType: string }) => void;
 };
 
