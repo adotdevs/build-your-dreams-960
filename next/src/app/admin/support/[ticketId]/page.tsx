@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/admin/TicketDetail";
+import Page from "@/views/admin/TicketDetail";
 
 export default function RoutePage() {
   return <Page />;

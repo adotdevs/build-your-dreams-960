@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/Wallet";
+import Page from "@/views/Wallet";
 
 export default function RoutePage() {
   return <Page />;

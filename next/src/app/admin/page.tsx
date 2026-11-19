@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/admin/AdminDashboard";
+import Page from "@/views/admin/AdminDashboard";
 
 export default function RoutePage() {
   return <Page />;

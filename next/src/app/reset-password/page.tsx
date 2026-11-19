@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/ResetPassword";
+import Page from "@/views/ResetPassword";
 
 export default function RoutePage() {
   return <Page />;

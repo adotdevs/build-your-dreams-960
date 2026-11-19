@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/PrivacyPage";
+import Page from "@/views/PrivacyPage";
 
 export default function RoutePage() {
   return <Page />;

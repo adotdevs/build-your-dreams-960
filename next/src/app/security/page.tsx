@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/SecurityPage";
+import Page from "@/views/SecurityPage";
 
 export default function RoutePage() {
   return <Page />;

@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/FiscalProfile";
+import Page from "@/views/FiscalProfile";
 
 export default function RoutePage() {
   return <Page />;

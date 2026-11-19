@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/admin/AgentAnalytics";
+import Page from "@/views/admin/AgentAnalytics";
 
 export default function RoutePage() {
   return <Page />;

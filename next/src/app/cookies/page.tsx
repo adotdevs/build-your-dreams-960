@@ -1,6 +1,6 @@
 "use client";
 
-import Page from "@/pages/CookiesPage";
+import Page from "@/views/CookiesPage";
 
 export default function RoutePage() {
   return <Page />;
