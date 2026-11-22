@@ -11,7 +11,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import {
-  User, Lock, Shield, Bell, Globe, Loader2, Save, Eye, EyeOff, Building2, Database
+  User, Lock, Shield, Globe, Loader2, Save, Eye, EyeOff, Building2, Database, Mail, Send, CheckCircle2, AlertTriangle
 } from "lucide-react";
 import PlatformLayout from "./PlatformLayout";
 
@@ -42,9 +42,29 @@ const PlatformSettings = () => {
   });
   const [loadingInfo, setLoadingInfo] = useState(true);
 
+  // Email & SMTP settings (persisted in MongoDB for platform owner)
+  const [loadingEmailSettings, setLoadingEmailSettings] = useState(true);
+  const [savingEmailSettings, setSavingEmailSettings] = useState(false);
+  const [testingSmtp, setTestingSmtp] = useState(false);
+  const [showSmtpPass, setShowSmtpPass] = useState(false);
+  const [testRecipient, setTestRecipient] = useState("");
+  const [emailVerificationRequired, setEmailVerificationRequired] = useState(false);
+  const [smtp, setSmtp] = useState({
+    host: "",
+    port: "587",
+    secure: false,
+    user: "",
+    pass: "",
+    hasPass: false,
+    fromName: "Cryptogen",
+    fromEmail: "",
+    appUrl: "",
+  });
+
   useEffect(() => {
     if (user) {
       setEmail(user.email || "");
+      setTestRecipient((prev) => prev || user.email || "");
     }
 
     const saved = localStorage.getItem("platform_prefs");
@@ -55,7 +75,128 @@ const PlatformSettings = () => {
     }
 
     fetchPlatformInfo();
+    fetchEmailSettings();
   }, [user]);
+
+  const fetchEmailSettings = async () => {
+    setLoadingEmailSettings(true);
+    try {
+      const res = await fetch("/api/platform/settings", { credentials: "include" });
+      const json = await res.json();
+      if (!json.error && json.data) {
+        setEmailVerificationRequired(Boolean(json.data.emailVerificationRequired));
+        const s = json.data.smtp || {};
+        setSmtp({
+          host: s.host || "",
+          port: String(s.port || 587),
+          secure: Boolean(s.secure),
+          user: s.user || "",
+          pass: "",
+          hasPass: Boolean(s.hasPass),
+          fromName: s.fromName || "Cryptogen",
+          fromEmail: s.fromEmail || "",
+          appUrl: s.appUrl || "",
+        });
+      }
+    } catch {
+      // ignore initial load error
+    } finally {
+      setLoadingEmailSettings(false);
+    }
+  };
+
+  const handleSaveEmailSettings = async () => {
+    const portNum = Number(smtp.port);
+    if (smtp.host.trim() && (!Number.isFinite(portNum) || portNum <= 0)) {
+      toast({ title: "Invalid port", description: "Please enter a valid SMTP port number.", variant: "destructive" });
+      return;
+    }
+    if (emailVerificationRequired && (!smtp.host.trim() || !smtp.fromEmail.trim())) {
+      toast({
+        title: "SMTP required",
+        description: "Please configure SMTP Host and From Email before enabling Email Link Verification.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setSavingEmailSettings(true);
+    try {
+      const res = await fetch("/api/platform/settings", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({
+          emailVerificationRequired,
+          smtp: {
+            host: smtp.host.trim(),
+            port: Number.isFinite(portNum) && portNum > 0 ? portNum : 587,
+            secure: smtp.secure,
+            user: smtp.user.trim(),
+            ...(smtp.pass ? { pass: smtp.pass } : {}),
+            fromName: smtp.fromName.trim() || "Cryptogen",
+            fromEmail: smtp.fromEmail.trim(),
+            appUrl: smtp.appUrl.trim(),
+          },
+        }),
+      });
+      const json = await res.json();
+      if (json.error) {
+        toast({ title: "Error", description: json.error.message, variant: "destructive" });
+      } else {
+        setSmtp((prev) => ({
+          ...prev,
+          pass: "",
+          hasPass: Boolean(json.data?.smtp?.hasPass),
+        }));
+        toast({ title: "Email & SMTP settings saved" });
+      }
+    } catch {
+      toast({ title: "Error", description: "Failed to save email settings", variant: "destructive" });
+    } finally {
+      setSavingEmailSettings(false);
+    }
+  };
+
+  const handleTestSmtp = async () => {
+    const to = testRecipient.trim() || email;
+    if (!to) {
+      toast({ title: "Recipient required", description: "Enter an email address to send a test email.", variant: "destructive" });
+      return;
+    }
+    setTestingSmtp(true);
+    try {
+      const portNum = Number(smtp.port);
+      const res = await fetch("/api/platform/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({
+          action: "test_smtp",
+          to,
+          smtp: {
+            host: smtp.host.trim(),
+            port: Number.isFinite(portNum) && portNum > 0 ? portNum : 587,
+            secure: smtp.secure,
+            user: smtp.user.trim(),
+            ...(smtp.pass ? { pass: smtp.pass } : {}),
+            fromName: smtp.fromName.trim() || "Cryptogen",
+            fromEmail: smtp.fromEmail.trim(),
+          },
+        }),
+      });
+      const json = await res.json();
+      if (json.error) {
+        toast({ title: "SMTP Test Failed", description: json.error.message, variant: "destructive" });
+      } else {
+        toast({ title: "Test email sent", description: `Successfully sent a test email to ${to}.` });
+      }
+    } catch {
+      toast({ title: "SMTP Test Failed", description: "Unable to send test email", variant: "destructive" });
+    } finally {
+      setTestingSmtp(false);
+    }
+  };
 
   const fetchPlatformInfo = async () => {
     setLoadingInfo(true);
@@ -117,6 +258,7 @@ const PlatformSettings = () => {
         <Tabs defaultValue="account" className="space-y-6">
           <TabsList>
             <TabsTrigger value="account" className="gap-2"><User className="h-4 w-4" /> Account</TabsTrigger>
+            <TabsTrigger value="email" className="gap-2"><Mail className="h-4 w-4" /> Email &amp; SMTP</TabsTrigger>
             <TabsTrigger value="platform" className="gap-2"><Globe className="h-4 w-4" /> Platform</TabsTrigger>
             <TabsTrigger value="info" className="gap-2"><Database className="h-4 w-4" /> Info</TabsTrigger>
           </TabsList>
@@ -182,6 +324,204 @@ const PlatformSettings = () => {
                 </Button>
               </CardContent>
             </Card>
+          </TabsContent>
+
+          {/* Email & SMTP Tab */}
+          <TabsContent value="email" className="space-y-6">
+            {loadingEmailSettings ? (
+              <Card>
+                <CardContent className="flex justify-center py-12">
+                  <Loader2 className="h-6 w-6 animate-spin text-primary" />
+                </CardContent>
+              </Card>
+            ) : (
+              <>
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <CheckCircle2 className="h-5 w-5" /> Email Link Verification
+                    </CardTitle>
+                    <CardDescription>
+                      Require users to verify their email address via a confirmation link before signing in
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div className="flex items-center justify-between gap-4">
+                      <div>
+                        <p className="font-medium flex items-center gap-2">
+                          Require Email Link Verification
+                          {emailVerificationRequired && (
+                            <Badge variant="default" className="text-xs">Enabled</Badge>
+                          )}
+                        </p>
+                        <p className="text-sm text-muted-foreground">
+                          When enabled, newly registered and unverified users must click the verification link sent to their email before they can log in.
+                        </p>
+                      </div>
+                      <Switch
+                        checked={emailVerificationRequired}
+                        onCheckedChange={setEmailVerificationRequired}
+                      />
+                    </div>
+
+                    {emailVerificationRequired && (!smtp.host.trim() || !smtp.fromEmail.trim()) && (
+                      <div className="flex items-start gap-2 rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm">
+                        <AlertTriangle className="h-4 w-4 text-amber-600 mt-0.5 shrink-0" />
+                        <p className="text-muted-foreground">
+                          Configure your SMTP Host and From Email below so verification emails can be delivered.
+                        </p>
+                      </div>
+                    )}
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Mail className="h-5 w-5" /> SMTP Configuration
+                    </CardTitle>
+                    <CardDescription>
+                      Outgoing mail server used for email verification links and password resets
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-5">
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <div className="space-y-2">
+                        <Label htmlFor="smtp-host">SMTP Host</Label>
+                        <Input
+                          id="smtp-host"
+                          value={smtp.host}
+                          onChange={(e) => setSmtp({ ...smtp, host: e.target.value })}
+                          placeholder="smtp.gmail.com"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="smtp-port">SMTP Port</Label>
+                        <Input
+                          id="smtp-port"
+                          type="number"
+                          value={smtp.port}
+                          onChange={(e) => setSmtp({ ...smtp, port: e.target.value })}
+                          placeholder="587"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="smtp-user">SMTP Username</Label>
+                        <Input
+                          id="smtp-user"
+                          value={smtp.user}
+                          onChange={(e) => setSmtp({ ...smtp, user: e.target.value })}
+                          placeholder="your-user@domain.com"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="smtp-pass">
+                          SMTP Password {smtp.hasPass && <span className="text-xs text-muted-foreground font-normal">(saved)</span>}
+                        </Label>
+                        <div className="relative">
+                          <Input
+                            id="smtp-pass"
+                            type={showSmtpPass ? "text" : "password"}
+                            value={smtp.pass}
+                            onChange={(e) => setSmtp({ ...smtp, pass: e.target.value })}
+                            placeholder={smtp.hasPass ? "Leave blank to keep current password" : "••••••••"}
+                          />
+                          <button
+                            type="button"
+                            onClick={() => setShowSmtpPass(!showSmtpPass)}
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
+                          >
+                            {showSmtpPass ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                          </button>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="smtp-from-name">From Name</Label>
+                        <Input
+                          id="smtp-from-name"
+                          value={smtp.fromName}
+                          onChange={(e) => setSmtp({ ...smtp, fromName: e.target.value })}
+                          placeholder="Cryptogen"
+                        />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="smtp-from-email">From Email</Label>
+                        <Input
+                          id="smtp-from-email"
+                          type="email"
+                          value={smtp.fromEmail}
+                          onChange={(e) => setSmtp({ ...smtp, fromEmail: e.target.value })}
+                          placeholder="no-reply@cryptogen.com"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="smtp-app-url">Application Base URL (optional)</Label>
+                      <Input
+                        id="smtp-app-url"
+                        value={smtp.appUrl}
+                        onChange={(e) => setSmtp({ ...smtp, appUrl: e.target.value })}
+                        placeholder="https://app.cryptogen.com (defaults to current site URL)"
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        Used to build verification and password reset links sent in emails.
+                      </p>
+                    </div>
+
+                    <div className="flex items-center justify-between rounded-lg border p-3">
+                      <div>
+                        <p className="text-sm font-medium">Use SSL / TLS (Secure)</p>
+                        <p className="text-xs text-muted-foreground">
+                          Enable for port 465; leave off for STARTTLS on port 587.
+                        </p>
+                      </div>
+                      <Switch
+                        checked={smtp.secure}
+                        onCheckedChange={(v) => setSmtp({ ...smtp, secure: v })}
+                      />
+                    </div>
+
+                    <Button onClick={handleSaveEmailSettings} disabled={savingEmailSettings}>
+                      {savingEmailSettings ? (
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      ) : (
+                        <Save className="mr-2 h-4 w-4" />
+                      )}
+                      Save Email &amp; SMTP Settings
+                    </Button>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2">
+                      <Send className="h-5 w-5" /> Test SMTP Connection
+                    </CardTitle>
+                    <CardDescription>
+                      Send a test email to verify your SMTP server credentials
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="flex flex-col sm:flex-row gap-3">
+                    <Input
+                      type="email"
+                      value={testRecipient}
+                      onChange={(e) => setTestRecipient(e.target.value)}
+                      placeholder="recipient@example.com"
+                      className="sm:max-w-sm"
+                    />
+                    <Button variant="outline" onClick={handleTestSmtp} disabled={testingSmtp}>
+                      {testingSmtp ? (
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      ) : (
+                        <Send className="mr-2 h-4 w-4" />
+                      )}
+                      Send Test Email
+                    </Button>
+                  </CardContent>
+                </Card>
+              </>
+            )}
           </TabsContent>
 
           {/* Platform Tab */}

@@ -335,6 +335,11 @@ export const supabase = {
       if (!result.error && result.data?.session) notify("SIGNED_IN", result.data.session);
       return result;
     },
+    async verifyEmail(token: string) {
+      const result = await postJson("/api/auth/verify-email", { token });
+      if (!result.error && result.data?.session) notify("SIGNED_IN", result.data.session);
+      return result;
+    },
     async signOut() {
       const result = await postJson("/api/auth/signout");
       notify("SIGNED_OUT", null);

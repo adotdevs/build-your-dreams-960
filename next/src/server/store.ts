@@ -1,8 +1,10 @@
-import { randomUUID } from "crypto";
+import { randomBytes, randomUUID } from "crypto";
 import type { Db } from "mongodb";
 import { getDb } from "./mongo";
 import { type Actor, checkPassword, createSession, ensureSetup, getActor, hashPassword, publicUser } from "./auth";
 import { canResetClientPassword } from "@/lib/client-password-policy";
+import { getPlatformSettings, isSmtpConfigured, resolveAppBaseUrl } from "./platform-settings";
+import { sendVerificationEmail } from "./mailer";
 
 type Filter = { field: string; op: string; value: unknown };
 type Order = { field: string; ascending?: boolean };
@@ -468,6 +470,7 @@ async function createAccount(input: {
   metadata?: Record<string, unknown>;
   role?: string;
   companyId?: string | null;
+  emailVerified?: boolean;
 }) {
   const db = await getDb();
   const email = input.email.trim().toLowerCase();
@@ -481,11 +484,14 @@ async function createAccount(input: {
     const company = await db.collection("companies").find({ status: { $ne: "paused" } }).sort({ created_at: 1 }).limit(1).next();
     companyId = company?.id ? String(company.id) : null;
   }
+  const emailVerified = input.emailVerified !== false;
   await db.collection("users").insertOne({
     id,
     email,
     passwordHash: await hashPassword(input.password),
     metadata: input.metadata || {},
+    email_verified: emailVerified,
+    email_verified_at: emailVerified ? now : null,
     created_at: now,
   });
   const profile = {
@@ -514,12 +520,92 @@ async function createAccount(input: {
   return { user, error: null as null };
 }
 
-export async function signUp(email: string, password: string, metadata?: Record<string, unknown>) {
+async function issueAndSendVerificationEmail(params: {
+  userId: string;
+  email: string;
+  firstName?: string | null;
+  requestOrigin?: string | null;
+}) {
+  const db = await getDb();
+  const settings = await getPlatformSettings();
+  if (!isSmtpConfigured(settings.smtp)) {
+    throw new Error("Email verification is enabled, but SMTP is not configured. Please contact the platform administrator.");
+  }
+  const token = randomBytes(32).toString("hex");
+  const now = new Date().toISOString();
+  const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
+  await db.collection("email_verification_tokens").deleteMany({ userId: params.userId });
+  await db.collection("email_verification_tokens").insertOne({
+    token,
+    userId: params.userId,
+    email: params.email,
+    expiresAt,
+    created_at: now,
+  });
+  const baseUrl = resolveAppBaseUrl(params.requestOrigin, settings.smtp.appUrl);
+  const verifyUrl = `${baseUrl}/verify-email?token=${encodeURIComponent(token)}`;
+  await sendVerificationEmail({
+    to: params.email,
+    firstName: params.firstName,
+    verifyUrl,
+  });
+}
+
+export async function signUp(
+  email: string,
+  password: string,
+  metadata?: Record<string, unknown>,
+  requestOrigin?: string | null,
+) {
   await ensureSetup();
-  const created = await createAccount({ email, password, metadata, role: "client" });
-  if (created.error || !created.user) return { token: null, data: { user: null, session: null }, error: { message: created.error || "Sign up failed" } };
+  const settings = await getPlatformSettings();
+  const requireVerification = settings.emailVerificationRequired;
+
+  if (requireVerification && !isSmtpConfigured(settings.smtp)) {
+    return {
+      token: null,
+      data: { user: null, session: null },
+      error: { message: "Email verification is enabled, but SMTP is not configured. Please contact the platform administrator." },
+    };
+  }
+
+  const created = await createAccount({
+    email,
+    password,
+    metadata,
+    role: "client",
+    emailVerified: !requireVerification,
+  });
+  if (created.error || !created.user) {
+    return { token: null, data: { user: null, session: null }, error: { message: created.error || "Sign up failed" } };
+  }
+
+  if (requireVerification) {
+    try {
+      await issueAndSendVerificationEmail({
+        userId: created.user.id,
+        email: created.user.email,
+        firstName: typeof metadata?.first_name === "string" ? metadata.first_name : null,
+        requestOrigin,
+      });
+    } catch (error) {
+      const db = await getDb();
+      await db.collection("email_verification_tokens").deleteMany({ userId: created.user.id });
+      await db.collection("user_roles").deleteMany({ user_id: created.user.id });
+      await db.collection("profiles").deleteOne({ id: created.user.id });
+      await db.collection("users").deleteOne({ id: created.user.id });
+      const message = error instanceof Error ? error.message : "Failed to send verification email";
+      return { token: null, data: { user: null, session: null }, error: { message } };
+    }
+    return {
+      token: null,
+      data: { user: created.user, session: null, requiresEmailVerification: true },
+      error: null,
+    };
+  }
+
   const token = await createSession(created.user.id);
-  return { token, data: { user: created.user, session: { user: created.user } }, error: null };
+  return { token, data: { user: created.user, session: { user: created.user }, requiresEmailVerification: false }, error: null };
 }
 
 export async function signIn(email: string, password: string) {
@@ -529,9 +615,81 @@ export async function signIn(email: string, password: string) {
   if (!user || !(await checkPassword(password, String(user.passwordHash || "")))) {
     return { token: null, data: { user: null, session: null }, error: { message: "Invalid login credentials" } };
   }
+  const settings = await getPlatformSettings();
+  if (settings.emailVerificationRequired) {
+    const role = await roleOf(db, String(user.id));
+    const isAdminAccount = role ? ADMIN_ROLES.has(role) : false;
+    if (!isAdminAccount && user.email_verified !== true) {
+      return {
+        token: null,
+        data: { user: null, session: null, requiresEmailVerification: true, email: String(user.email) },
+        error: { message: "Please verify your email address before signing in. Check your inbox for the verification link." },
+      };
+    }
+  }
   const token = await createSession(String(user.id));
   const pub = publicUser(user as unknown as { id: string; email: string; metadata?: Record<string, unknown> });
   return { token, data: { user: pub, session: { user: pub } }, error: null };
+}
+
+export async function verifyEmailToken(token: string) {
+  await ensureSetup();
+  const cleaned = token.trim();
+  if (!cleaned) {
+    return { token: null, data: { verified: false, user: null, session: null }, error: { message: "Verification token is missing" } };
+  }
+  const db = await getDb();
+  const record = await db.collection("email_verification_tokens").findOne({ token: cleaned });
+  if (!record) {
+    return { token: null, data: { verified: false, user: null, session: null }, error: { message: "Invalid or already used verification link" } };
+  }
+  if (String(record.expiresAt) < new Date().toISOString()) {
+    await db.collection("email_verification_tokens").deleteOne({ token: cleaned });
+    return { token: null, data: { verified: false, user: null, session: null }, error: { message: "This verification link has expired. Please request a new one." } };
+  }
+  const user = await db.collection("users").findOne({ id: record.userId });
+  if (!user) {
+    await db.collection("email_verification_tokens").deleteOne({ token: cleaned });
+    return { token: null, data: { verified: false, user: null, session: null }, error: { message: "Account not found" } };
+  }
+  const now = new Date().toISOString();
+  await db.collection("users").updateOne(
+    { id: user.id },
+    { $set: { email_verified: true, email_verified_at: now } },
+  );
+  await db.collection("email_verification_tokens").deleteMany({ userId: user.id });
+  const sessionToken = await createSession(String(user.id));
+  const pub = publicUser(user as unknown as { id: string; email: string; metadata?: Record<string, unknown> });
+  return {
+    token: sessionToken,
+    data: { verified: true, user: pub, session: { user: pub } },
+    error: null,
+  };
+}
+
+export async function resendVerificationEmail(email: string, requestOrigin?: string | null) {
+  await ensureSetup();
+  const normalized = email.trim().toLowerCase();
+  if (!normalized) {
+    return { data: null, error: { message: "Email is required" } };
+  }
+  const settings = await getPlatformSettings();
+  if (!isSmtpConfigured(settings.smtp)) {
+    return { data: null, error: { message: "SMTP is not configured. Please contact the platform administrator." } };
+  }
+  const db = await getDb();
+  const user = await db.collection("users").findOne({ email: normalized });
+  if (!user || user.email_verified === true) {
+    return { data: { sent: true }, error: null };
+  }
+  const metadata = (user.metadata as Record<string, unknown> | undefined) || {};
+  await issueAndSendVerificationEmail({
+    userId: String(user.id),
+    email: String(user.email),
+    firstName: typeof metadata.first_name === "string" ? metadata.first_name : null,
+    requestOrigin,
+  });
+  return { data: { sent: true }, error: null };
 }
 
 export async function updatePassword(userId: string, password: string) {

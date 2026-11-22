@@ -13,7 +13,7 @@ interface AuthContextType {
   isCompanyAdmin: boolean;
   userRole: UserRole | null;
   companyId: string | null;
-  signUp: (email: string, password: string, metadata?: Record<string, unknown>) => Promise<{ error: Error | null }>;
+  signUp: (email: string, password: string, metadata?: Record<string, unknown>) => Promise<{ error: Error | null; requiresEmailVerification?: boolean }>;
   signIn: (email: string, password: string) => Promise<{ error: Error | null }>;
   signOut: () => Promise<void>;
 }
@@ -118,6 +118,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
     if (error) return { error: error as Error };
 
+    if (data?.requiresEmailVerification) {
+      return { error: null, requiresEmailVerification: true };
+    }
+
     // If sign-up did not return an active session, sign the user in right away
     // so the onboarding flow (fiscal profile, KYC, wallet) stays authenticated.
     if (!data.session) {
@@ -125,7 +129,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       if (signInError) return { error: signInError as Error };
     }
 
-    return { error: null };
+    return { error: null, requiresEmailVerification: false };
   };
 
   const signIn = async (email: string, password: string) => {

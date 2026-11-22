@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Eye, EyeOff, Loader2 } from "lucide-react";
+import { Eye, EyeOff, Loader2, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import Logo from "@/components/Logo";
@@ -17,8 +17,35 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [unverifiedEmail, setUnverifiedEmail] = useState<string | null>(null);
+  const [resendingVerification, setResendingVerification] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
+
+  const handleResendVerification = async () => {
+    if (!unverifiedEmail) return;
+    setResendingVerification(true);
+    try {
+      const res = await fetch("/api/auth/resend-verification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: unverifiedEmail }),
+      });
+      const json = await res.json();
+      if (json.error) {
+        toast({ title: t('login.error'), description: json.error.message, variant: "destructive" });
+      } else {
+        toast({
+          title: "Verification email sent",
+          description: `A new verification link has been sent to ${unverifiedEmail}.`,
+        });
+      }
+    } catch {
+      toast({ title: t('login.error'), description: t('login.unexpectedError'), variant: "destructive" });
+    } finally {
+      setResendingVerification(false);
+    }
+  };
 
   const resolveEmail = (input: string): string => {
     if (input.includes('@')) return input;
@@ -28,6 +55,7 @@ const Login = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    setUnverifiedEmail(null);
 
     const email = resolveEmail(identifier);
 
@@ -38,6 +66,9 @@ const Login = () => {
       });
       
       if (error) {
+        if (authData?.requiresEmailVerification) {
+          setUnverifiedEmail(authData.email || email);
+        }
         toast({
           title: t('login.error'),
           description: error.message || t('login.invalidCredentials'),
@@ -99,6 +130,28 @@ const Login = () => {
 
         <form onSubmit={handleSubmit}>
           <CardContent className="space-y-4">
+            {unverifiedEmail && (
+              <div className="rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-sm space-y-2">
+                <p className="font-medium text-foreground">Email verification required</p>
+                <p className="text-muted-foreground">
+                  Please click the verification link sent to <span className="font-medium">{unverifiedEmail}</span> before signing in.
+                </p>
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="sm"
+                  onClick={handleResendVerification}
+                  disabled={resendingVerification}
+                >
+                  {resendingVerification ? (
+                    <Loader2 className="mr-2 h-3.5 w-3.5 animate-spin" />
+                  ) : (
+                    <Mail className="mr-2 h-3.5 w-3.5" />
+                  )}
+                  Resend verification email
+                </Button>
+              </div>
+            )}
             <div className="space-y-2">
               <Label htmlFor="identifier">{t('login.email')}</Label>
               <Input

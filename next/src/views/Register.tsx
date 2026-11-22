@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Eye, EyeOff, Shield, Zap, TrendingUp, Loader2, CalendarIcon, CheckCircle2 } from "lucide-react";
+import { Eye, EyeOff, Shield, Zap, TrendingUp, Loader2, CalendarIcon, CheckCircle2, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils";
@@ -61,9 +61,36 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [datePopoverOpen, setDatePopoverOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [pendingVerificationEmail, setPendingVerificationEmail] = useState<string | null>(null);
+  const [resendingVerification, setResendingVerification] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
   const { signUp } = useAuth();
+
+  const handleResendVerification = async () => {
+    if (!pendingVerificationEmail) return;
+    setResendingVerification(true);
+    try {
+      const res = await fetch("/api/auth/resend-verification", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: pendingVerificationEmail }),
+      });
+      const json = await res.json();
+      if (json.error) {
+        toast({ title: t('login.error'), description: json.error.message, variant: "destructive" });
+      } else {
+        toast({
+          title: "Verification email resent",
+          description: `We sent a new verification link to ${pendingVerificationEmail}.`,
+        });
+      }
+    } catch {
+      toast({ title: t('login.error'), description: t('login.unexpectedError'), variant: "destructive" });
+    } finally {
+      setResendingVerification(false);
+    }
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -93,7 +120,7 @@ const Register = () => {
     setIsLoading(true);
 
     try {
-      const { error } = await signUp(formData.email, formData.password, {
+      const { error, requiresEmailVerification } = await signUp(formData.email, formData.password, {
         first_name: formData.firstName,
         last_name: formData.lastName,
         phone: formData.phone,
@@ -118,6 +145,15 @@ const Register = () => {
           variant: "destructive",
         });
         setIsLoading(false);
+        return;
+      }
+
+      if (requiresEmailVerification) {
+        setPendingVerificationEmail(formData.email);
+        toast({
+          title: "Verify your email",
+          description: `We sent a verification link to ${formData.email}. Please check your inbox.`,
+        });
         return;
       }
 
@@ -217,6 +253,39 @@ const Register = () => {
 
         {/* Form Container */}
         <div className="flex flex-1 items-start sm:items-center justify-center p-4 sm:p-6 lg:p-12 overflow-y-auto">
+          {pendingVerificationEmail ? (
+            <div className="w-full max-w-md space-y-6 rounded-xl border bg-card p-6 sm:p-8 text-center">
+              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <Mail className="h-7 w-7" />
+              </div>
+              <div className="space-y-2">
+                <h2 className="text-2xl font-bold tracking-tight">Check your email</h2>
+                <p className="text-sm text-muted-foreground">
+                  We sent a verification link to <span className="font-medium text-foreground">{pendingVerificationEmail}</span>.
+                  Please click the link in your inbox to activate your account before signing in.
+                </p>
+              </div>
+              <div className="space-y-3 pt-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="w-full"
+                  onClick={handleResendVerification}
+                  disabled={resendingVerification}
+                >
+                  {resendingVerification ? (
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  ) : (
+                    <Mail className="mr-2 h-4 w-4" />
+                  )}
+                  Resend Verification Email
+                </Button>
+                <Button type="button" className="w-full" onClick={() => navigate("/login")}>
+                  Go to Sign In
+                </Button>
+              </div>
+            </div>
+          ) : (
           <div className="w-full max-w-md space-y-6 sm:space-y-8">
             {/* Header */}
             <div className="text-center lg:text-left">
@@ -496,6 +565,7 @@ const Register = () => {
               </Link>
             </p>
           </div>
+          )}
         </div>
       </div>
     </div>

@@ -121,6 +121,8 @@ async function setup() {
   await db.collection("profiles").createIndex({ company_id: 1 });
   await db.collection("profiles").createIndex({ agent_id: 1 });
   await db.collection("events").createIndex({ seq: 1 });
+  await db.collection("email_verification_tokens").createIndex({ token: 1 }, { unique: true });
+  await db.collection("email_verification_tokens").createIndex({ userId: 1 });
 
   const existing = await db.collection("users").countDocuments();
   if (existing > 0) return;
@@ -134,6 +136,8 @@ async function setup() {
     email,
     passwordHash: await hashPassword(password),
     metadata: { first_name: "Platform", last_name: "Owner" },
+    email_verified: true,
+    email_verified_at: now,
     created_at: now,
   });
   await db.collection("profiles").insertOne({
