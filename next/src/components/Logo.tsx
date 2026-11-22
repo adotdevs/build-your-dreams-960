@@ -1,5 +1,5 @@
 import { Link } from "@/lib/router-compat";
-const CoinlyLogo = "/logos/coinly-logo.svg";
+const CryptogenLogo = "/logos/cryptogen-logo.png";
 
 interface LogoProps {
   linkTo?: string;
@@ -18,9 +18,9 @@ const Logo = ({ linkTo = "/", size = "md", showLink = true, className = "" }: Lo
   const LogoContent = (
     <div className={`flex items-center ${sizeClasses[size]} ${className}`}>
       <img
-        src={CoinlyLogo}
+        src={CryptogenLogo}
         alt="Cryptogen"
-        className="h-full w-auto"
+        className="h-full w-auto object-contain"
       />
     </div>
   );

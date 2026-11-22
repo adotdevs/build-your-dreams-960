@@ -1,5 +1,6 @@
 import { Link } from "@/lib/router-compat";
 import { useTranslation } from "react-i18next";
+import Logo from "@/components/Logo";
 import { 
   Shield, 
   FileText, 
@@ -30,11 +31,8 @@ const DashboardFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">CG</span>
-              </div>
-              <span className="font-semibold">Cryptogen</span>
+            <div className="mb-4">
+              <Logo size="md" linkTo="/dashboard" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               {t('dashboardFooter.description')}

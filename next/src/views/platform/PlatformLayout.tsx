@@ -3,7 +3,7 @@ import { Link, useNavigate, useLocation } from "@/lib/router-compat";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { 
-  LayoutDashboard, Building2, LogOut, Loader2, BarChart3, Settings
+  LayoutDashboard, Building2, Users, LogOut, Loader2, BarChart3, Settings
 } from "lucide-react";
 import Logo from "@/components/Logo";
 
@@ -42,6 +42,7 @@ const PlatformLayout = ({ children }: PlatformLayoutProps) => {
   const navItems = [
     { icon: LayoutDashboard, label: "Dashboard", path: "/platform" },
     { icon: Building2, label: "Companies", path: "/platform/companies" },
+    { icon: Users, label: "Users & Agents", path: "/platform/users" },
     { icon: BarChart3, label: "Analytics", path: "/platform/analytics" },
     { icon: Settings, label: "Settings", path: "/platform/settings" },
   ];

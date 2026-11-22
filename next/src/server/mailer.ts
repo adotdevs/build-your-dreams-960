@@ -58,7 +58,7 @@ export async function sendVerificationEmail(params: {
   const text = `${greeting}\n\nPlease verify your email address by opening this link:\n${params.verifyUrl}\n\nThis link will expire in 24 hours. If you did not create an account, you can safely ignore this email.`;
   const html = `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 24px; color: #111827;">
-      <h2 style="margin: 0 0 16px; font-size: 24px; font-weight: 600;">Cryptogen<span style="color: #FF6B5B;">.</span></h2>
+      <h2 style="margin: 0 0 16px; font-size: 26px; font-weight: 700; letter-spacing: -0.02em;">cryptogen<span style="color: #EA5228;">.</span></h2>
       <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.6;">${greeting}</p>
       <p style="margin: 0 0 24px; font-size: 15px; line-height: 1.6;">
         Please confirm your email address to activate your account by clicking the button below:
@@ -86,7 +86,7 @@ export async function sendPasswordResetEmail(params: { to: string; resetUrl: str
   const text = `You requested a password reset for your Cryptogen account.\n\nOpen this link to choose a new password:\n${params.resetUrl}\n\nThis link expires in 1 hour.`;
   const html = `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 24px; color: #111827;">
-      <h2 style="margin: 0 0 16px; font-size: 24px; font-weight: 600;">Cryptogen<span style="color: #FF6B5B;">.</span></h2>
+      <h2 style="margin: 0 0 16px; font-size: 26px; font-weight: 700; letter-spacing: -0.02em;">cryptogen<span style="color: #EA5228;">.</span></h2>
       <p style="margin: 0 0 16px; font-size: 15px; line-height: 1.6;">
         You requested a password reset for your account. Click the button below to set a new password:
       </p>
@@ -113,7 +113,7 @@ export async function sendTestEmail(to: string, overrideSmtp?: Partial<SmtpSetti
   const text = "This is a test email from Cryptogen Platform Settings confirming that your SMTP configuration is working.";
   const html = `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 24px; color: #111827;">
-      <h2 style="margin: 0 0 16px; font-size: 24px; font-weight: 600;">Cryptogen<span style="color: #FF6B5B;">.</span></h2>
+      <h2 style="margin: 0 0 16px; font-size: 26px; font-weight: 700; letter-spacing: -0.02em;">cryptogen<span style="color: #EA5228;">.</span></h2>
       <p style="margin: 0; font-size: 15px; line-height: 1.6;">
         Your SMTP configuration is working properly. Emails from Cryptogen can now be delivered.
       </p>
