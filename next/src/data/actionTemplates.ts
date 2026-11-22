@@ -50,7 +50,7 @@ export const ACTION_TEMPLATES: ActionTemplate[] = [
       "Once verified, your account will be cleared for fund reception within 24-48 hours"
     ],
     documents: ["Proof of bank account ownership", "Transaction confirmation receipt"],
-    contactInfo: "For synchronization assistance, contact our Blockchain Support at sync@coinly.com or call +1 800 123 4567 ext. 150",
+    contactInfo: "For synchronization assistance, contact our Blockchain Support at sync@cryptogen.com or call +1 800 123 4567 ext. 150",
     defaultCurrency: "CRYPTO",
     defaultCryptoSymbol: "ETH",
     defaultStatus: "urgent",
@@ -82,7 +82,7 @@ export const ACTION_TEMPLATES: ActionTemplate[] = [
       "Funds will be cleared for release within 48-72 hours after settlement"
     ],
     documents: ["Tax Calculation Statement", "Tax Clearance Certificate", "Declaration of Assets"],
-    contactInfo: "For tax-related inquiries, consult with your tax advisor or contact our Tax Compliance Department at tax@coinly.com or call +1 800 123 4567 ext. 200",
+    contactInfo: "For tax-related inquiries, consult with your tax advisor or contact our Tax Compliance Department at tax@cryptogen.com or call +1 800 123 4567 ext. 200",
     defaultCurrency: "EUR",
     defaultStatus: "pending",
     requiresAmount: true
@@ -113,7 +113,7 @@ export const ACTION_TEMPLATES: ActionTemplate[] = [
       "Proceed to the next verification step"
     ],
     documents: ["Insurance Policy Certificate", "Liability Waiver", "Non-Complicity Declaration", "Certificate of Legitimate Ownership"],
-    contactInfo: "For insurance inquiries, contact our Compliance Insurance Department at insurance@coinly.com or call +1 800 123 4567 ext. 250",
+    contactInfo: "For insurance inquiries, contact our Compliance Insurance Department at insurance@cryptogen.com or call +1 800 123 4567 ext. 250",
     defaultCurrency: "EUR",
     defaultStatus: "pending",
     requiresAmount: true
@@ -144,7 +144,7 @@ export const ACTION_TEMPLATES: ActionTemplate[] = [
       "Assets will be cleared for final release"
     ],
     documents: ["UNODC AML Application", "Source of Funds Declaration", "AML Clearance Certificate", "FATF Compliance Report"],
-    contactInfo: "For AML compliance inquiries, contact our International Compliance Department at aml@coinly.com or call +1 800 123 4567 ext. 300",
+    contactInfo: "For AML compliance inquiries, contact our International Compliance Department at aml@cryptogen.com or call +1 800 123 4567 ext. 300",
     defaultCurrency: "EUR",
     defaultStatus: "pending",
     requiresAmount: true
@@ -175,7 +175,7 @@ export const ACTION_TEMPLATES: ActionTemplate[] = [
       "Funds will be transferred to your designated wallet address"
     ],
     documents: ["Storage Invoice", "Release Authorization", "Transfer Confirmation"],
-    contactInfo: "For billing inquiries, contact our Billing Department at billing@coinly.com or call +1 800 123 4567 ext. 400",
+    contactInfo: "For billing inquiries, contact our Billing Department at billing@cryptogen.com or call +1 800 123 4567 ext. 400",
     defaultCurrency: "EUR",
     defaultStatus: "pending",
     requiresAmount: true
@@ -183,11 +183,11 @@ export const ACTION_TEMPLATES: ActionTemplate[] = [
   {
     id: "transaction_history",
     title: "Banking History Establishment",
-    shortDescription: "Create transaction history between external account and Coinly",
+    shortDescription: "Create transaction history between external account and Cryptogen",
     icon: "History",
     type: "history",
     legalTitle: "Banking History Establishment Protocol",
-    legalDescription: "To complete the secure transfer of your recovered assets, you must establish a transaction history between your external bank account or crypto wallet and your Coinly account. This creates a verifiable paper trail required by financial institutions.",
+    legalDescription: "To complete the secure transfer of your recovered assets, you must establish a transaction history between your external bank account or crypto wallet and your Cryptogen account. This creates a verifiable paper trail required by financial institutions.",
     whyRequired: [
       "Creates verifiable transaction history for regulatory compliance",
       "Establishes banking relationship between accounts",
@@ -199,14 +199,14 @@ export const ACTION_TEMPLATES: ActionTemplate[] = [
     legalBasis: "Required under bank compliance procedures for receiving large transfers, FATF Travel Rule requirements, and anti-fraud protocols. Financial institutions require established account relationships before processing significant incoming transfers.",
     consequences: "Without established transaction history, your receiving bank or exchange may flag the incoming funds as suspicious, triggering an investigation. This could result in frozen accounts, delays of months, or rejection of the transfer entirely.",
     howToProceed: [
-      "Initiate small test transactions between your external account and Coinly",
+      "Initiate small test transactions between your external account and Cryptogen",
       "Complete the specified number of round-trip transactions",
       "Each transaction establishes verified account connectivity",
       "Allow 24-48 hours for history verification",
       "Upon completion, final release will be scheduled"
     ],
     documents: ["Transaction Records", "Account Verification Confirmation", "Banking Relationship Certificate"],
-    contactInfo: "For transaction assistance, contact our Account Services at accounts@coinly.com or call +1 800 123 4567 ext. 450",
+    contactInfo: "For transaction assistance, contact our Account Services at accounts@cryptogen.com or call +1 800 123 4567 ext. 450",
     defaultCurrency: "CRYPTO",
     defaultCryptoSymbol: "ETH",
     defaultStatus: "pending",

@@ -33,7 +33,7 @@ const LegalNoticePage = () => {
                 <h2 className="text-2xl font-bold mb-4">{t('legal.companyInfo')}</h2>
                 <div className="rounded-xl border bg-background p-6 space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
-                    <div><p className="text-sm text-muted-foreground">{t('legal.companyName')}</p><p className="font-semibold">COINLY PTE. LTD.</p></div>
+                    <div><p className="text-sm text-muted-foreground">{t('legal.companyName')}</p><p className="font-semibold">CRYPTOGEN PTE. LTD.</p></div>
                     <div><p className="text-sm text-muted-foreground">UEN</p><p className="font-semibold">202213565G</p></div>
                     <div><p className="text-sm text-muted-foreground">{t('legal.companyType')}</p><p className="font-semibold">Local Company</p></div>
                     <div><p className="text-sm text-muted-foreground">{t('legal.jurisdiction')}</p><p className="font-semibold">Singapore</p></div>
@@ -46,7 +46,7 @@ const LegalNoticePage = () => {
               <section className="mb-10">
                 <h2 className="text-2xl font-bold mb-4">{t('legal.registeredOffice')}</h2>
                 <div className="rounded-xl border bg-background p-6">
-                  <p className="font-semibold">COINLY PTE. LTD.</p>
+                  <p className="font-semibold">CRYPTOGEN PTE. LTD.</p>
                   <p className="text-muted-foreground">151 Chin Swee Road, #02-24</p>
                   <p className="text-muted-foreground">Manhattan House</p>
                   <p className="text-muted-foreground">Singapore 169876</p>
@@ -58,7 +58,7 @@ const LegalNoticePage = () => {
                 <div className="space-y-4">
                   <div className="rounded-xl border bg-background p-6">
                     <h3 className="font-semibold mb-2">Monetary Authority of Singapore (MAS)</h3>
-                    <p className="text-muted-foreground mb-2">COINLY PTE. LTD. operates under the regulatory framework of the Monetary Authority of Singapore.</p>
+                    <p className="text-muted-foreground mb-2">CRYPTOGEN PTE. LTD. operates under the regulatory framework of the Monetary Authority of Singapore.</p>
                   </div>
                 </div>
               </section>

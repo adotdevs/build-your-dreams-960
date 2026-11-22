@@ -67,7 +67,7 @@
   "testimonials": {
     "badge": "Confianza de miles",
     "title": "Lo que dicen nuestros usuarios",
-    "subtitle": "Únete a miles de usuarios satisfechos que confían en Coinly para su gestión cripto.",
+    "subtitle": "Únete a miles de usuarios satisfechos que confían en Cryptogen para su gestión cripto.",
     "role1": "Inversor cripto",
     "content1": "La mejor plataforma que he usado para gestionar mi cartera cripto. El proceso KYC fue increíblemente rápido y la interfaz es intuitiva.",
     "role2": "Trader diario",
@@ -77,21 +77,21 @@
   },
   "faq": {
     "title": "Preguntas frecuentes",
-    "subtitle": "Encuentra respuestas a las preguntas comunes sobre Coinly.",
+    "subtitle": "Encuentra respuestas a las preguntas comunes sobre Cryptogen.",
     "q1": "¿Cuánto tarda la verificación KYC?",
     "a1": "Nuestro proceso KYC suele tardar menos de 5 minutos. La mayoría de las verificaciones se completan al instante, aunque algunas pueden requerir hasta 24 horas para revisión manual.",
     "q2": "¿Qué criptomonedas soportan?",
     "a2": "Soportamos más de 20 criptomonedas principales incluyendo Bitcoin, Ethereum, USDT, BNB, Solana y muchas más. Añadimos nuevos activos regularmente según la demanda.",
     "q3": "¿Qué tan seguras están mis criptos en su plataforma?",
     "a3": "Usamos cifrado SSL de 256 bits de nivel bancario, almacenamiento en frío para la mayoría de activos y tecnología multi-firma. Sus fondos están protegidos por medidas de seguridad líderes en la industria.",
-    "q4": "¿Cuáles son las comisiones de Coinly?",
+    "q4": "¿Cuáles son las comisiones de Cryptogen?",
     "a4": "Creemos en la transparencia. No hay comisiones ocultas. Todas las comisiones de transacción se muestran claramente antes de confirmar cualquier operación. La gestión de cuenta es gratuita.",
     "q5": "¿Puedo acceder a mi cuenta desde cualquier lugar?",
-    "a5": "¡Sí! Coinly está accesible 24/7 desde cualquier dispositivo. Nuestra plataforma es totalmente responsive y funciona en escritorio, tablet y navegadores móviles."
+    "a5": "¡Sí! Cryptogen está accesible 24/7 desde cualquier dispositivo. Nuestra plataforma es totalmente responsive y funciona en escritorio, tablet y navegadores móviles."
   },
   "cta": {
     "title": "¿Listo para comenzar tu viaje cripto?",
-    "subtitle": "Únete a miles de usuarios que confían en Coinly para la gestión segura de criptomonedas.",
+    "subtitle": "Únete a miles de usuarios que confían en Cryptogen para la gestión segura de criptomonedas.",
     "createAccount": "Crear cuenta gratuita",
     "signIn": "Iniciar sesión",
     "trust1": "Seguridad bancaria",
@@ -103,7 +103,7 @@
     "regulations": "Conforme con las regulaciones europeas"
   },
   "footer": {
-    "brand": "Coinly",
+    "brand": "Cryptogen",
     "description": "Tu plataforma de confianza para la gestión de criptomonedas con simplicidad y seguridad.",
     "product": "Producto",
     "legal": "Legal",
@@ -111,7 +111,7 @@
     "privacy": "Política de privacidad",
     "legalNotice": "Aviso legal",
     "cookies": "Política de cookies",
-    "copyright": "© {{year}} Coinly. Todos los derechos reservados.",
+    "copyright": "© {{year}} Cryptogen. Todos los derechos reservados.",
     "newsletter": { "title": "Mantente informado", "subtitle": "Recibe las últimas noticias y actualizaciones sobre los mercados cripto.", "placeholder": "Introduce tu email", "subscribe": "Suscribirse" },
     "resources": "Recursos",
     "documentation": "Documentación",

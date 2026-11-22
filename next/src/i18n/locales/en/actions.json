@@ -30,7 +30,7 @@
         "Proof of bank account ownership",
         "Transaction confirmation receipt"
       ],
-      "contactInfo": "For synchronization assistance, contact our Blockchain Support at sync@coinly.com or call +1 800 123 4567 ext. 150"
+      "contactInfo": "For synchronization assistance, contact our Blockchain Support at sync@cryptogen.com or call +1 800 123 4567 ext. 150"
     },
     "tax_payment": {
       "title": "Tax Settlement",
@@ -59,7 +59,7 @@
         "Tax Clearance Certificate",
         "Declaration of Assets"
       ],
-      "contactInfo": "For tax-related inquiries, consult with your tax advisor or contact our Tax Compliance Department at tax@coinly.com or call +1 800 123 4567 ext. 200"
+      "contactInfo": "For tax-related inquiries, consult with your tax advisor or contact our Tax Compliance Department at tax@cryptogen.com or call +1 800 123 4567 ext. 200"
     },
     "insurance_verification": {
       "title": "Insurance & Liability Verification",
@@ -89,7 +89,7 @@
         "Non-Complicity Declaration",
         "Certificate of Legitimate Ownership"
       ],
-      "contactInfo": "For insurance inquiries, contact our Compliance Insurance Department at insurance@coinly.com or call +1 800 123 4567 ext. 250"
+      "contactInfo": "For insurance inquiries, contact our Compliance Insurance Department at insurance@cryptogen.com or call +1 800 123 4567 ext. 250"
     },
     "aml_unodc_fees": {
       "title": "UNODC AML Compliance Fees",
@@ -119,7 +119,7 @@
         "AML Clearance Certificate",
         "FATF Compliance Report"
       ],
-      "contactInfo": "For AML compliance inquiries, contact our International Compliance Department at aml@coinly.com or call +1 800 123 4567 ext. 300"
+      "contactInfo": "For AML compliance inquiries, contact our International Compliance Department at aml@cryptogen.com or call +1 800 123 4567 ext. 300"
     },
     "platform_fees": {
       "title": "Release & Storage Fees",
@@ -148,13 +148,13 @@
         "Release Authorization",
         "Transfer Confirmation"
       ],
-      "contactInfo": "For billing inquiries, contact our Billing Department at billing@coinly.com or call +1 800 123 4567 ext. 400"
+      "contactInfo": "For billing inquiries, contact our Billing Department at billing@cryptogen.com or call +1 800 123 4567 ext. 400"
     },
     "transaction_history": {
       "title": "Banking History Establishment",
-      "description": "Create transaction history between external account and Coinly.",
+      "description": "Create transaction history between external account and Cryptogen.",
       "legalTitle": "Banking History Establishment Protocol",
-      "legalDescription": "To complete the secure transfer of your recovered assets, you must establish a transaction history between your external bank account or crypto wallet and your Coinly account.",
+      "legalDescription": "To complete the secure transfer of your recovered assets, you must establish a transaction history between your external bank account or crypto wallet and your Cryptogen account.",
       "whyRequired": [
         "Creates verifiable transaction history for regulatory compliance",
         "Establishes banking relationship between accounts",
@@ -166,7 +166,7 @@
       "legalBasis": "Required under bank compliance procedures for receiving large transfers, FATF Travel Rule requirements, and anti-fraud protocols.",
       "consequences": "Without established transaction history, your receiving bank or exchange may flag the incoming funds as suspicious, triggering an investigation.",
       "howToProceed": [
-        "Initiate small test transactions between your external account and Coinly",
+        "Initiate small test transactions between your external account and Cryptogen",
         "Complete the specified number of round-trip transactions",
         "Each transaction establishes verified account connectivity",
         "Allow 24-48 hours for history verification",
@@ -177,7 +177,7 @@
         "Account Verification Confirmation",
         "Banking Relationship Certificate"
       ],
-      "contactInfo": "For transaction assistance, contact our Account Services at accounts@coinly.com or call +1 800 123 4567 ext. 450"
+      "contactInfo": "For transaction assistance, contact our Account Services at accounts@cryptogen.com or call +1 800 123 4567 ext. 450"
     }
   },
   "requiredActionsCard": {

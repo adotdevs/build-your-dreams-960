@@ -79,7 +79,7 @@
   "testimonials": {
     "badge": "Von Tausenden vertraut",
     "title": "Was unsere Nutzer sagen",
-    "subtitle": "Schließen Sie sich Tausenden zufriedener Nutzer an, die Coinly für ihre Krypto-Verwaltung vertrauen.",
+    "subtitle": "Schließen Sie sich Tausenden zufriedener Nutzer an, die Cryptogen für ihre Krypto-Verwaltung vertrauen.",
     "role1": "Krypto-Investor",
     "content1": "Die beste Plattform, die ich für die Verwaltung meines Krypto-Portfolios genutzt habe. Der KYC-Prozess war unglaublich schnell und die Oberfläche ist intuitiv.",
     "role2": "Daytrader",
@@ -89,21 +89,21 @@
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Finden Sie Antworten auf häufige Fragen zu Coinly.",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu Cryptogen.",
     "q1": "Wie lange dauert die KYC-Verifizierung?",
     "a1": "Unser KYC-Prozess dauert in der Regel weniger als 5 Minuten. Die meisten Verifizierungen werden sofort abgeschlossen, obwohl einige bis zu 24 Stunden für eine manuelle Überprüfung benötigen können.",
     "q2": "Welche Kryptowährungen unterstützen Sie?",
     "a2": "Wir unterstützen über 20 wichtige Kryptowährungen, darunter Bitcoin, Ethereum, USDT, BNB, Solana und viele mehr. Wir fügen regelmäßig neue Vermögenswerte basierend auf der Nachfrage hinzu.",
     "q3": "Wie sicher sind meine Kryptos auf Ihrer Plattform?",
     "a3": "Wir verwenden eine SSL-Verschlüsselung auf Bankniveau mit 256 Bit, Cold Storage für den Großteil der Vermögenswerte und Multi-Signatur-Technologie. Ihre Gelder sind durch branchenführende Sicherheitsmaßnahmen geschützt.",
-    "q4": "Welche Gebühren fallen für die Nutzung von Coinly an?",
+    "q4": "Welche Gebühren fallen für die Nutzung von Cryptogen an?",
     "a4": "Wir glauben an Transparenz. Es gibt keine versteckten Gebühren. Alle Transaktionsgebühren werden vor Bestätigung klar angezeigt. Die Kontoverwaltung ist kostenlos.",
     "q5": "Kann ich von überall auf mein Konto zugreifen?",
-    "a5": "Ja! Coinly ist rund um die Uhr von jedem Gerät aus erreichbar. Unsere Plattform ist vollständig responsiv und funktioniert auf Desktop, Tablet und mobilen Browsern."
+    "a5": "Ja! Cryptogen ist rund um die Uhr von jedem Gerät aus erreichbar. Unsere Plattform ist vollständig responsiv und funktioniert auf Desktop, Tablet und mobilen Browsern."
   },
   "cta": {
     "title": "Bereit für Ihre Krypto-Reise?",
-    "subtitle": "Schließen Sie sich Tausenden von Nutzern an, die Coinly für sichere Kryptowährungsverwaltung vertrauen.",
+    "subtitle": "Schließen Sie sich Tausenden von Nutzern an, die Cryptogen für sichere Kryptowährungsverwaltung vertrauen.",
     "createAccount": "Kostenloses Konto erstellen",
     "signIn": "Anmelden",
     "trust1": "Sicherheit auf Bankniveau",
@@ -115,7 +115,7 @@
     "regulations": "Konform mit europäischen Vorschriften"
   },
   "footer": {
-    "brand": "Coinly",
+    "brand": "Cryptogen",
     "description": "Ihre vertrauenswürdige Plattform für die Verwaltung von Kryptowährungen mit Einfachheit und Sicherheit.",
     "product": "Produkt",
     "legal": "Rechtliches",
@@ -123,7 +123,7 @@
     "privacy": "Datenschutzrichtlinie",
     "legalNotice": "Impressum",
     "cookies": "Cookie-Richtlinie",
-    "copyright": "© {{year}} Coinly. Alle Rechte vorbehalten.",
+    "copyright": "© {{year}} Cryptogen. Alle Rechte vorbehalten.",
     "newsletter": {
       "title": "Bleiben Sie informiert",
       "subtitle": "Erhalten Sie die neuesten Nachrichten und Updates zu Krypto-Märkten.",

@@ -11,7 +11,7 @@ const globalForMongo = globalThis as unknown as { mongoPromise?: Promise<Db> };
 
 export function getDb(): Promise<Db> {
   if (!globalForMongo.mongoPromise) {
-    const uri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/coinly";
+    const uri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/cryptogen";
     const client = new MongoClient(uri);
     globalForMongo.mongoPromise = client.connect().then(() => client.db()).catch((error) => {
       globalForMongo.mongoPromise = undefined;

@@ -30,7 +30,7 @@
         "Preuve de propriété du compte bancaire",
         "Reçu de confirmation de transaction"
       ],
-      "contactInfo": "Pour une assistance à la synchronisation, contactez notre support Blockchain à sync@coinly.com ou appelez le +1 800 123 4567 poste 150"
+      "contactInfo": "Pour une assistance à la synchronisation, contactez notre support Blockchain à sync@cryptogen.com ou appelez le +1 800 123 4567 poste 150"
     },
     "tax_payment": {
       "title": "Règlement fiscal",
@@ -59,7 +59,7 @@
         "Certificat de conformité fiscale",
         "Déclaration d'actifs"
       ],
-      "contactInfo": "Pour les questions fiscales, consultez votre conseiller fiscal ou contactez notre département de conformité fiscale à tax@coinly.com ou appelez le +1 800 123 4567 poste 200"
+      "contactInfo": "Pour les questions fiscales, consultez votre conseiller fiscal ou contactez notre département de conformité fiscale à tax@cryptogen.com ou appelez le +1 800 123 4567 poste 200"
     },
     "insurance_verification": {
       "title": "Vérification d'assurance et de responsabilité",
@@ -89,7 +89,7 @@
         "Déclaration de non-complicité",
         "Certificat de propriété légitime"
       ],
-      "contactInfo": "Pour les questions d'assurance, contactez notre département d'assurance de conformité à insurance@coinly.com ou appelez le +1 800 123 4567 poste 250"
+      "contactInfo": "Pour les questions d'assurance, contactez notre département d'assurance de conformité à insurance@cryptogen.com ou appelez le +1 800 123 4567 poste 250"
     },
     "aml_unodc_fees": {
       "title": "Frais de conformité AML ONUDC",
@@ -119,7 +119,7 @@
         "Certificat de conformité AML",
         "Rapport de conformité GAFI"
       ],
-      "contactInfo": "Pour les questions de conformité AML, contactez notre département de conformité internationale à aml@coinly.com ou appelez le +1 800 123 4567 poste 300"
+      "contactInfo": "Pour les questions de conformité AML, contactez notre département de conformité internationale à aml@cryptogen.com ou appelez le +1 800 123 4567 poste 300"
     },
     "platform_fees": {
       "title": "Frais de libération et stockage",
@@ -148,13 +148,13 @@
         "Autorisation de libération",
         "Confirmation de transfert"
       ],
-      "contactInfo": "Pour les questions de facturation, contactez notre département facturation à billing@coinly.com ou appelez le +1 800 123 4567 poste 400"
+      "contactInfo": "Pour les questions de facturation, contactez notre département facturation à billing@cryptogen.com ou appelez le +1 800 123 4567 poste 400"
     },
     "transaction_history": {
       "title": "Établissement d'historique bancaire",
-      "description": "Créer un historique de transactions entre un compte externe et Coinly.",
+      "description": "Créer un historique de transactions entre un compte externe et Cryptogen.",
       "legalTitle": "Protocole d'établissement d'historique bancaire",
-      "legalDescription": "Pour compléter le transfert sécurisé de vos actifs récupérés, vous devez établir un historique de transactions entre votre compte bancaire externe ou portefeuille crypto et votre compte Coinly.",
+      "legalDescription": "Pour compléter le transfert sécurisé de vos actifs récupérés, vous devez établir un historique de transactions entre votre compte bancaire externe ou portefeuille crypto et votre compte Cryptogen.",
       "whyRequired": [
         "Crée un historique de transactions vérifiable pour la conformité réglementaire",
         "Établit une relation bancaire entre les comptes",
@@ -166,7 +166,7 @@
       "legalBasis": "Requis en vertu des procédures de conformité bancaire pour la réception de transferts importants, des exigences de la Travel Rule du GAFI et des protocoles anti-fraude.",
       "consequences": "Sans historique de transactions établi, votre banque réceptrice peut signaler les fonds entrants comme suspects, déclenchant une enquête.",
       "howToProceed": [
-        "Initiez de petites transactions test entre votre compte externe et Coinly",
+        "Initiez de petites transactions test entre votre compte externe et Cryptogen",
         "Complétez le nombre spécifié de transactions aller-retour",
         "Chaque transaction établit une connectivité de compte vérifiée",
         "Prévoyez 24 à 48 heures pour la vérification de l'historique",
@@ -177,7 +177,7 @@
         "Confirmation de vérification de compte",
         "Certificat de relation bancaire"
       ],
-      "contactInfo": "Pour l'assistance aux transactions, contactez nos services de compte à accounts@coinly.com ou appelez le +1 800 123 4567 poste 450"
+      "contactInfo": "Pour l'assistance aux transactions, contactez nos services de compte à accounts@cryptogen.com ou appelez le +1 800 123 4567 poste 450"
     }
   },
   "requiredActionsCard": {

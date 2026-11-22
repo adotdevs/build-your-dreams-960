@@ -243,7 +243,7 @@ const MIN_PASSWORD_LENGTH = 1;
 
     setIsCreating(true);
     try {
-      const agentEmail = newAgentUsername.includes('@') ? newAgentUsername : `${newAgentUsername}@coinly.internal`;
+      const agentEmail = newAgentUsername.includes('@') ? newAgentUsername : `${newAgentUsername}@cryptogen.internal`;
       
       // Call edge function to create agent without affecting current session
       const { error } = await createAgent({
@@ -431,7 +431,7 @@ const MIN_PASSWORD_LENGTH = 1;
                     required
                   />
                   <p className="text-xs text-muted-foreground">
-                    The agent will log in with this username. The suffix @coinly.internal will be added automatically.
+                    The agent will log in with this username. The suffix @cryptogen.internal will be added automatically.
                   </p>
                 </div>
                 <div className="space-y-2">

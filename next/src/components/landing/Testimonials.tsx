@@ -44,7 +44,7 @@ const Testimonials = () => {
             {t('testimonials.title', 'What Our Users Say')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            {t('testimonials.subtitle', 'Join thousands of satisfied users who trust Coinly for their crypto management.')}
+            {t('testimonials.subtitle', 'Join thousands of satisfied users who trust Cryptogen for their crypto management.')}
           </p>
         </div>
 

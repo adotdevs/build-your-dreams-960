@@ -584,7 +584,7 @@ export async function runAdmin(action: string, data: Record<string, unknown>) {
   if (action === "createCompanyAdmin") {
     if (role !== "platform_owner") return fail("Only platform owners can create company admins");
     if (!data.username || !data.password || !data.company_id) return fail("Username, password and company_id are required");
-    const email = `${String(data.username).toLowerCase().replace(/[^a-z0-9_-]/g, "")}@coinly.internal`;
+    const email = `${String(data.username).toLowerCase().replace(/[^a-z0-9_-]/g, "")}@cryptogen.internal`;
     const created = await createAccount({
       email,
       password: String(data.password),

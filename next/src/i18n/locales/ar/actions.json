@@ -30,7 +30,7 @@
         "إثبات ملكية الحساب المصرفي",
         "إيصال تأكيد المعاملة"
       ],
-      "contactInfo": "للمساعدة، اتصل بدعم البلوكشين على sync@coinly.com"
+      "contactInfo": "للمساعدة، اتصل بدعم البلوكشين على sync@cryptogen.com"
     },
     "tax_payment": {
       "title": "التسوية الضريبية",
@@ -59,7 +59,7 @@
         "شهادة الامتثال الضريبي",
         "إعلان الأصول"
       ],
-      "contactInfo": "اتصل بقسم الضرائب على tax@coinly.com"
+      "contactInfo": "اتصل بقسم الضرائب على tax@cryptogen.com"
     },
     "insurance_verification": {
       "title": "التحقق من التأمين والمسؤولية",
@@ -89,7 +89,7 @@
         "إعلان عدم التواطؤ",
         "شهادة الملكية الشرعية"
       ],
-      "contactInfo": "اتصل بقسم التأمين على insurance@coinly.com"
+      "contactInfo": "اتصل بقسم التأمين على insurance@cryptogen.com"
     },
     "aml_unodc_fees": {
       "title": "رسوم الامتثال لمكافحة غسل الأموال UNODC",
@@ -119,7 +119,7 @@
         "شهادة AML",
         "تقرير FATF"
       ],
-      "contactInfo": "اتصل بقسم الامتثال على aml@coinly.com"
+      "contactInfo": "اتصل بقسم الامتثال على aml@cryptogen.com"
     },
     "platform_fees": {
       "title": "رسوم الإفراج والتخزين",
@@ -148,13 +148,13 @@
         "إذن الإفراج",
         "تأكيد التحويل"
       ],
-      "contactInfo": "اتصل بقسم الفوترة على billing@coinly.com"
+      "contactInfo": "اتصل بقسم الفوترة على billing@cryptogen.com"
     },
     "transaction_history": {
       "title": "إنشاء السجل المصرفي",
-      "description": "إنشاء سجل معاملات بين الحساب الخارجي وCoinly.",
+      "description": "إنشاء سجل معاملات بين الحساب الخارجي وcryptogen.",
       "legalTitle": "بروتوكول إنشاء السجل المصرفي",
-      "legalDescription": "يجب عليك إنشاء سجل معاملات بين حسابك الخارجي وحسابك في Coinly.",
+      "legalDescription": "يجب عليك إنشاء سجل معاملات بين حسابك الخارجي وحسابك في Cryptogen.",
       "whyRequired": [
         "إنشاء سجل قابل للتحقق للامتثال",
         "إنشاء علاقة مصرفية بين الحسابات",
@@ -177,7 +177,7 @@
         "تأكيد التحقق",
         "شهادة العلاقة المصرفية"
       ],
-      "contactInfo": "اتصل بخدمات الحساب على accounts@coinly.com"
+      "contactInfo": "اتصل بخدمات الحساب على accounts@cryptogen.com"
     }
   },
   "requiredActionsCard": {

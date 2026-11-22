@@ -3,7 +3,7 @@ import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 import { getDb } from "./mongo";
 
-export const SESSION_COOKIE = "coinly_session";
+export const SESSION_COOKIE = "cryptogen_session";
 const SESSION_DAYS = 14;
 
 export type Actor = {
@@ -20,7 +20,7 @@ export type PublicUser = {
 };
 
 function secret() {
-  return process.env.AUTH_SECRET || "coinly-local-auth-secret";
+  return process.env.AUTH_SECRET || "cryptogen-local-auth-secret";
 }
 
 export function signValue(value: string) {
@@ -125,7 +125,7 @@ async function setup() {
   const existing = await db.collection("users").countDocuments();
   if (existing > 0) return;
 
-  const email = (process.env.SEED_OWNER_EMAIL || "owner@coinly.internal").toLowerCase();
+  const email = (process.env.SEED_OWNER_EMAIL || "owner@cryptogen.internal").toLowerCase();
   const password = process.env.SEED_OWNER_PASSWORD || "Owner12345!";
   const id = crypto.randomUUID();
   const now = new Date().toISOString();

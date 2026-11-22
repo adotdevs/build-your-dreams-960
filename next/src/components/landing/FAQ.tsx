@@ -23,12 +23,12 @@ const FAQ = () => {
       answer: t('faq.a3', 'We use bank-level 256-bit SSL encryption, cold storage for the majority of assets, and multi-signature technology. Your funds are protected by industry-leading security measures.'),
     },
     {
-      question: t('faq.q4', 'What are the fees for using Coinly?'),
+      question: t('faq.q4', 'What are the fees for using Cryptogen?'),
       answer: t('faq.a4', 'We believe in transparency. There are no hidden fees. All transaction fees are clearly displayed before you confirm any operation. Account management is free.'),
     },
     {
       question: t('faq.q5', 'Can I access my account from anywhere?'),
-      answer: t('faq.a5', 'Yes! Coinly is accessible 24/7 from any device. Our platform is fully responsive and works on desktop, tablet, and mobile browsers.'),
+      answer: t('faq.a5', 'Yes! Cryptogen is accessible 24/7 from any device. Our platform is fully responsive and works on desktop, tablet, and mobile browsers.'),
     },
   ];
 
@@ -40,7 +40,7 @@ const FAQ = () => {
             {t('faq.title', 'Frequently Asked Questions')}
           </h2>
           <p className="text-lg text-muted-foreground">
-            {t('faq.subtitle', 'Find answers to common questions about Coinly.')}
+            {t('faq.subtitle', 'Find answers to common questions about Cryptogen.')}
           </p>
         </div>
 

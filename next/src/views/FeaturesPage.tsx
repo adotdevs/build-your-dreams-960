@@ -83,7 +83,7 @@ const FeaturesPage = () => {
               </div>
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-                  <img src={typeof featuresDashboard === "string" ? featuresDashboard : featuresDashboard.src} alt="Coinly Dashboard" className="w-full h-auto" />
+                  <img src={typeof featuresDashboard === "string" ? featuresDashboard : featuresDashboard.src} alt="Cryptogen Dashboard" className="w-full h-auto" />
                 </div>
                 <div className="absolute -bottom-6 -left-6 rounded-xl border bg-background/90 backdrop-blur-sm px-4 py-3 shadow-xl">
                   <div className="flex items-center gap-3">

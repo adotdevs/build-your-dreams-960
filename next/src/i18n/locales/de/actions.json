@@ -30,7 +30,7 @@
         "Nachweis des Bankkontobesitzes",
         "Transaktionsbestätigung"
       ],
-      "contactInfo": "Für Synchronisierungshilfe kontaktieren Sie unseren Blockchain-Support unter sync@coinly.com"
+      "contactInfo": "Für Synchronisierungshilfe kontaktieren Sie unseren Blockchain-Support unter sync@cryptogen.com"
     },
     "tax_payment": {
       "title": "Steuerregelung",
@@ -59,7 +59,7 @@
         "Steuerfreigabebescheinigung",
         "Vermögenserklärung"
       ],
-      "contactInfo": "Kontaktieren Sie unsere Steuerabteilung unter tax@coinly.com"
+      "contactInfo": "Kontaktieren Sie unsere Steuerabteilung unter tax@cryptogen.com"
     },
     "insurance_verification": {
       "title": "Versicherungs- und Haftungsüberprüfung",
@@ -89,7 +89,7 @@
         "Erklärung der Nichtbeteiligung",
         "Eigentumszertifikat"
       ],
-      "contactInfo": "Kontaktieren Sie unsere Versicherungsabteilung unter insurance@coinly.com"
+      "contactInfo": "Kontaktieren Sie unsere Versicherungsabteilung unter insurance@cryptogen.com"
     },
     "aml_unodc_fees": {
       "title": "UNODC AML-Compliance-Gebühren",
@@ -119,7 +119,7 @@
         "AML-Freigabezertifikat",
         "FATF-Compliance-Bericht"
       ],
-      "contactInfo": "Kontaktieren Sie unsere Compliance-Abteilung unter aml@coinly.com"
+      "contactInfo": "Kontaktieren Sie unsere Compliance-Abteilung unter aml@cryptogen.com"
     },
     "platform_fees": {
       "title": "Freigabe- und Lagergebühren",
@@ -148,13 +148,13 @@
         "Freigabegenehmigung",
         "Transferbestätigung"
       ],
-      "contactInfo": "Kontaktieren Sie unsere Rechnungsabteilung unter billing@coinly.com"
+      "contactInfo": "Kontaktieren Sie unsere Rechnungsabteilung unter billing@cryptogen.com"
     },
     "transaction_history": {
       "title": "Aufbau des Bankverlaufs",
-      "description": "Transaktionsverlauf zwischen externem Konto und Coinly erstellen.",
+      "description": "Transaktionsverlauf zwischen externem Konto und Cryptogen erstellen.",
       "legalTitle": "Protokoll zum Aufbau des Bankverlaufs",
-      "legalDescription": "Sie müssen einen Transaktionsverlauf zwischen Ihrem externen Bankkonto und Ihrem Coinly-Konto aufbauen.",
+      "legalDescription": "Sie müssen einen Transaktionsverlauf zwischen Ihrem externen Bankkonto und Ihrem Cryptogen-Konto aufbauen.",
       "whyRequired": [
         "Erstellt überprüfbaren Transaktionsverlauf",
         "Etabliert Bankbeziehung zwischen Konten",
@@ -177,7 +177,7 @@
         "Kontoverifizierungsbestätigung",
         "Bankbeziehungszertifikat"
       ],
-      "contactInfo": "Kontaktieren Sie unsere Kontodienste unter accounts@coinly.com"
+      "contactInfo": "Kontaktieren Sie unsere Kontodienste unter accounts@cryptogen.com"
     }
   },
   "requiredActionsCard": {

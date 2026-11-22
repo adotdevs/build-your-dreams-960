@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Coinly Design System - Premium Fintech */
+/* Cryptogen Design System - Premium Fintech */
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

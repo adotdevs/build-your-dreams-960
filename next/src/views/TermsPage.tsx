@@ -78,7 +78,7 @@ const TermsPage = () => {
                 <h2 className="text-2xl font-bold mb-4">{t('terms.s10.title')}</h2>
                 <p className="text-muted-foreground leading-relaxed">{t('terms.s10.intro')}</p>
                 <div className="mt-4 p-4 rounded-xl bg-muted/50">
-                  <p className="font-medium">COINLY PTE. LTD.</p>
+                  <p className="font-medium">CRYPTOGEN PTE. LTD.</p>
                   <p className="text-muted-foreground">UEN: 202213565G</p>
                   <p className="text-muted-foreground">151 Chin Swee Road, #02-24, Manhattan House</p>
                   <p className="text-muted-foreground">Singapore 169876</p>

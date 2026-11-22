@@ -34,7 +34,7 @@ const DashboardFooter = () => {
               <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
                 <span className="text-primary font-bold text-sm">CG</span>
               </div>
-              <span className="font-semibold">Coinly</span>
+              <span className="font-semibold">Cryptogen</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
               {t('dashboardFooter.description')}
@@ -102,7 +102,7 @@ const DashboardFooter = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>© {currentYear} Coinly. {t('dashboardFooter.allRights')}</p>
+          <p>© {currentYear} Cryptogen. {t('dashboardFooter.allRights')}</p>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
               <span className="w-2 h-2 rounded-full bg-emerald-500"></span>

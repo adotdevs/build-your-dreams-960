@@ -35,7 +35,7 @@ const Footer = () => {
               {t('landing:footer.description')}
             </p>
             <div className="space-y-1 text-xs text-muted-foreground">
-              <p className="font-medium text-foreground">COINLY PTE. LTD.</p>
+              <p className="font-medium text-foreground">CRYPTOGEN PTE. LTD.</p>
               <p>UEN: 202213565G</p>
               <p>151 Chin Swee Road, #02-24</p>
               <p>Manhattan House, Singapore 169876</p>

@@ -19,7 +19,7 @@ const Logo = ({ linkTo = "/", size = "md", showLink = true, className = "" }: Lo
     <div className={`flex items-center ${sizeClasses[size]} ${className}`}>
       <img
         src={CoinlyLogo}
-        alt="Coinly"
+        alt="Cryptogen"
         className="h-full w-auto"
       />
     </div>

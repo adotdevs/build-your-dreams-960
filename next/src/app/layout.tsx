@@ -4,8 +4,8 @@ import AppShell from "@/components/app-shell";
 import "@/styles.css";
 
 export const metadata: Metadata = {
-  title: "Coinly | Secure Crypto Asset Recovery",
-  description: "Coinly is a regulated platform for recovering, tracking and withdrawing crypto assets.",
+  title: "Cryptogen | Secure Crypto Asset Recovery",
+  description: "Cryptogen is a regulated platform for recovering, tracking and withdrawing crypto assets.",
   icons: { icon: "/favicon.png" },
 };
 

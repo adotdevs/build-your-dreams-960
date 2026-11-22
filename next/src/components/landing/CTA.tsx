@@ -25,7 +25,7 @@ const CTA = () => {
               {t('cta.title', 'Ready to Start Your Crypto Journey?')}
             </h2>
             <p className="mb-8 text-lg text-muted-foreground md:text-xl">
-              {t('cta.subtitle', 'Join thousands of users who trust Coinly for secure cryptocurrency management.')}
+              {t('cta.subtitle', 'Join thousands of users who trust Cryptogen for secure cryptocurrency management.')}
             </p>
 
             <div className="mb-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

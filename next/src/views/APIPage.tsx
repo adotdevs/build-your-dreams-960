@@ -114,7 +114,7 @@ const APIPage = () => {
                   <span>{t('api.exampleRequest')}</span>
                 </div>
                 <pre className="text-sm text-zinc-300 font-mono">
-{`curl -X GET "https://api.coinly.com/v1/portfolio" \\
+{`curl -X GET "https://api.cryptogen.com/v1/portfolio" \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json"
 

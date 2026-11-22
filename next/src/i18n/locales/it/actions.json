@@ -30,7 +30,7 @@
         "Prova di proprietà del conto bancario",
         "Ricevuta di conferma della transazione"
       ],
-      "contactInfo": "Per assistenza, contattate il nostro supporto Blockchain a sync@coinly.com"
+      "contactInfo": "Per assistenza, contattate il nostro supporto Blockchain a sync@cryptogen.com"
     },
     "tax_payment": {
       "title": "Liquidazione fiscale",
@@ -59,7 +59,7 @@
         "Certificato di conformità fiscale",
         "Dichiarazione dei beni"
       ],
-      "contactInfo": "Contattate il nostro dipartimento fiscale a tax@coinly.com"
+      "contactInfo": "Contattate il nostro dipartimento fiscale a tax@cryptogen.com"
     },
     "insurance_verification": {
       "title": "Verifica assicurativa e di responsabilità",
@@ -89,7 +89,7 @@
         "Dichiarazione di non complicità",
         "Certificato di proprietà legittima"
       ],
-      "contactInfo": "Contattate il nostro dipartimento assicurativo a insurance@coinly.com"
+      "contactInfo": "Contattate il nostro dipartimento assicurativo a insurance@cryptogen.com"
     },
     "aml_unodc_fees": {
       "title": "Tariffe di conformità AML UNODC",
@@ -119,7 +119,7 @@
         "Certificato AML",
         "Rapporto GAFI"
       ],
-      "contactInfo": "Contattate il nostro dipartimento di conformità a aml@coinly.com"
+      "contactInfo": "Contattate il nostro dipartimento di conformità a aml@cryptogen.com"
     },
     "platform_fees": {
       "title": "Tariffe di rilascio e conservazione",
@@ -148,13 +148,13 @@
         "Autorizzazione al rilascio",
         "Conferma di trasferimento"
       ],
-      "contactInfo": "Contattate la fatturazione a billing@coinly.com"
+      "contactInfo": "Contattate la fatturazione a billing@cryptogen.com"
     },
     "transaction_history": {
       "title": "Stabilimento della cronologia bancaria",
-      "description": "Creare cronologia di transazioni tra conto esterno e Coinly.",
+      "description": "Creare cronologia di transazioni tra conto esterno e Cryptogen.",
       "legalTitle": "Protocollo di stabilimento della cronologia bancaria",
-      "legalDescription": "Dovete stabilire una cronologia di transazioni tra il vostro conto esterno e il vostro conto Coinly.",
+      "legalDescription": "Dovete stabilire una cronologia di transazioni tra il vostro conto esterno e il vostro conto Cryptogen.",
       "whyRequired": [
         "Crea cronologia verificabile per conformità",
         "Stabilisce relazione bancaria tra conti",
@@ -177,7 +177,7 @@
         "Conferma di verifica",
         "Certificato di relazione bancaria"
       ],
-      "contactInfo": "Contattate i servizi account a accounts@coinly.com"
+      "contactInfo": "Contattate i servizi account a accounts@cryptogen.com"
     }
   },
   "requiredActionsCard": {

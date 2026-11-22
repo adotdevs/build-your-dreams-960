@@ -1,7 +1,7 @@
 {
   "api": {
     "badge": "API Développeur",
-    "title": "Construisez avec l'API Coinly",
+    "title": "Construisez avec l'API Cryptogen",
     "subtitle": "API RESTful puissante pour intégrer la gestion des cryptomonnaies dans vos applications.",
     "getApiKeys": "Obtenir les clés API",
     "viewDocs": "Voir la documentation",
@@ -33,7 +33,7 @@
   "features": {
     "badge": "Fonctionnalités",
     "title": "Tout ce dont vous avez besoin pour gérer vos cryptos",
-    "subtitle": "Découvrez les fonctionnalités puissantes qui font de Coinly le choix préféré pour la gestion des cryptomonnaies.",
+    "subtitle": "Découvrez les fonctionnalités puissantes qui font de Cryptogen le choix préféré pour la gestion des cryptomonnaies.",
     "getStarted": "Commencer gratuitement",
     "allInOne": "Plateforme tout-en-un",
     "users": "50 000+ utilisateurs",
@@ -80,7 +80,7 @@
       "referral": { "title": "Programme de parrainage", "description": "Gagnez avec vos amis" }
     },
     "ctaTitle": "Prêt à commencer ?",
-    "ctaDesc": "Rejoignez des milliers d'utilisateurs qui font confiance à Coinly pour leur gestion de cryptomonnaies.",
+    "ctaDesc": "Rejoignez des milliers d'utilisateurs qui font confiance à Cryptogen pour leur gestion de cryptomonnaies.",
     "createFree": "Créer un compte gratuit"
   },
   "security": {
@@ -132,14 +132,14 @@
     "badge": "Document légal",
     "title": "Conditions d'utilisation",
     "lastUpdated": "Dernière mise à jour : 1er février 2026",
-    "s1": { "title": "1. Introduction", "p1": "Bienvenue sur Coinly. Les présentes Conditions d'utilisation (« Conditions ») régissent votre accès et votre utilisation de la plateforme Coinly, y compris notre site web, nos applications mobiles et tous les services associés (collectivement, les « Services ») exploités par Coinly Ltd, une société constituée en Angleterre et au Pays de Galles sous le numéro 12345678, dont le siège social est situé au 71-75 Shelton Street, Covent Garden, Londres, WC2H 9JQ, Royaume-Uni (« Société », « nous » ou « notre »).", "p2": "En accédant ou en utilisant nos Services, vous acceptez d'être lié par ces Conditions. Si vous n'acceptez pas ces Conditions, vous ne pouvez pas accéder ou utiliser les Services." },
+    "s1": { "title": "1. Introduction", "p1": "Bienvenue sur Cryptogen. Les présentes Conditions d'utilisation (« Conditions ») régissent votre accès et votre utilisation de la plateforme Cryptogen, y compris notre site web, nos applications mobiles et tous les services associés (collectivement, les « Services ») exploités par Cryptogen Ltd, une société constituée en Angleterre et au Pays de Galles sous le numéro 12345678, dont le siège social est situé au 71-75 Shelton Street, Covent Garden, Londres, WC2H 9JQ, Royaume-Uni (« Société », « nous » ou « notre »).", "p2": "En accédant ou en utilisant nos Services, vous acceptez d'être lié par ces Conditions. Si vous n'acceptez pas ces Conditions, vous ne pouvez pas accéder ou utiliser les Services." },
     "s2": { "title": "2. Éligibilité", "intro": "Pour utiliser nos Services, vous devez :", "items": ["Avoir au moins 18 ans", "Résider dans une juridiction où nos Services sont disponibles", "Compléter notre processus de vérification d'identité (KYC)", "Ne pas être interdit d'utiliser des services de cryptomonnaie", "Ne pas être situé dans une juridiction soumise à des sanctions globales"] },
     "s3": { "title": "3. Inscription au compte", "intro": "Pour accéder à certaines fonctionnalités, vous devez créer un compte. En créant votre compte, vous acceptez de :", "items": ["Fournir des informations exactes, actuelles et complètes", "Maintenir et mettre à jour rapidement vos informations", "Maintenir la sécurité et la confidentialité de vos identifiants", "Accepter la responsabilité de toutes les activités sous votre compte", "Nous notifier immédiatement de tout accès non autorisé"] },
-    "s4": { "title": "4. Description des services", "intro": "Coinly fournit une plateforme de gestion de portefeuille de cryptomonnaies, incluant :", "items": ["Gestion sécurisée de portefeuilles de cryptomonnaies", "Suivi et analyses de portefeuille en temps réel", "Services de dépôt et de retrait de cryptomonnaies", "Données de marché et informations sur les prix", "Historique des transactions et rapports"], "note": "Nous nous réservons le droit de modifier, suspendre ou interrompre tout aspect de nos Services à tout moment." },
+    "s4": { "title": "4. Description des services", "intro": "Cryptogen fournit une plateforme de gestion de portefeuille de cryptomonnaies, incluant :", "items": ["Gestion sécurisée de portefeuilles de cryptomonnaies", "Suivi et analyses de portefeuille en temps réel", "Services de dépôt et de retrait de cryptomonnaies", "Données de marché et informations sur les prix", "Historique des transactions et rapports"], "note": "Nous nous réservons le droit de modifier, suspendre ou interrompre tout aspect de nos Services à tout moment." },
     "s5": { "title": "5. Frais et paiements", "p1": "Certains Services peuvent être soumis à des frais. Tous les frais applicables seront affichés avant de finaliser une transaction. Les frais ne sont pas remboursables sauf exigence légale.", "p2": "Les frais de réseau pour les transactions en cryptomonnaie sont déterminés par les réseaux blockchain respectifs et sont séparés de nos frais de service." },
     "s6": { "title": "6. Divulgation des risques", "intro": "Les investissements en cryptomonnaie comportent des risques importants, notamment :", "items": ["Forte volatilité des prix et perte potentielle de valeur", "Incertitude réglementaire et restrictions potentielles", "Risques technologiques y compris bugs et cyberattaques", "Risques de liquidité affectant la capacité d'achat ou de vente", "Irréversibilité des transactions blockchain"], "warning": "N'investissez que ce que vous pouvez vous permettre de perdre. Les performances passées ne préjugent pas des résultats futurs." },
     "s7": { "title": "7. Activités interdites", "intro": "Vous acceptez de ne pas utiliser nos Services pour :", "items": ["Blanchiment d'argent, financement du terrorisme ou autres activités illégales", "Fraude, tromperie ou fausse déclaration", "Contournement des lois ou réglementations applicables", "Interférence avec le bon fonctionnement des Services", "Accès aux comptes d'autrui sans autorisation"] },
-    "s8": { "title": "8. Limitation de responsabilité", "content": "Dans toute la mesure permise par la loi, Coinly Ltd et ses dirigeants, employés et affiliés ne seront pas responsables des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation des Services." },
+    "s8": { "title": "8. Limitation de responsabilité", "content": "Dans toute la mesure permise par la loi, Cryptogen Ltd et ses dirigeants, employés et affiliés ne seront pas responsables des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation des Services." },
     "s9": { "title": "9. Droit applicable", "content": "Les présentes Conditions sont régies par les lois d'Angleterre et du Pays de Galles. Tout litige sera soumis à la juridiction exclusive des tribunaux d'Angleterre et du Pays de Galles." },
     "s10": { "title": "10. Coordonnées", "intro": "Pour toute question concernant ces Conditions, veuillez nous contacter :" }
   },
@@ -147,14 +147,14 @@
     "badge": "Votre vie privée compte",
     "title": "Politique de confidentialité",
     "lastUpdated": "Dernière mise à jour : 1er février 2026",
-    "s1": { "title": "1. Introduction", "content": "Coinly Ltd (« nous » ou « notre ») s'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre plateforme et nos services. Nous sommes enregistrés en tant que responsable du traitement auprès du Bureau du Commissaire à l'Information (ICO) du Royaume-Uni sous le numéro ZA123456." },
+    "s1": { "title": "1. Introduction", "content": "Cryptogen Ltd (« nous » ou « notre ») s'engage à protéger votre vie privée. Cette politique de confidentialité explique comment nous collectons, utilisons, divulguons et protégeons vos informations lorsque vous utilisez notre plateforme et nos services. Nous sommes enregistrés en tant que responsable du traitement auprès du Bureau du Commissaire à l'Information (ICO) du Royaume-Uni sous le numéro ZA123456." },
     "s2": { "title": "2. Informations que nous collectons", "personal": "2.1 Informations personnelles", "personalIntro": "Nous collectons les informations que vous nous fournissez directement, notamment :", "personalItems": ["Nom complet et date de naissance", "Adresse e-mail et numéro de téléphone", "Adresse de résidence", "Documents d'identité émis par le gouvernement", "Justificatifs de domicile", "Informations financières pour les transactions", "Selfie/photo pour la vérification d'identité"], "auto": "2.2 Informations collectées automatiquement", "autoIntro": "Lorsque vous utilisez nos Services, nous collectons automatiquement :", "autoItems": ["Informations sur l'appareil (type, OS, navigateur)", "Adresse IP et localisation approximative", "Données d'utilisation et habitudes de navigation", "Historique des transactions et activité du portefeuille", "Cookies et technologies de suivi similaires"] },
     "s3": { "title": "3. Comment nous utilisons vos informations", "intro": "Nous utilisons les informations collectées pour :", "items": ["Fournir, maintenir et améliorer nos Services", "Vérifier votre identité et respecter les exigences KYC/AML", "Traiter les transactions et envoyer les informations associées", "Envoyer des messages administratifs et des alertes de sécurité", "Répondre à vos demandes et fournir un support client", "Détecter, prévenir et traiter la fraude et les problèmes de sécurité", "Respecter les obligations légales et réglementaires", "Analyser les habitudes d'utilisation pour améliorer l'expérience"] },
     "s4": { "title": "4. Base légale du traitement (RGPD)", "intro": "Conformément au RGPD du Royaume-Uni, nous traitons vos données sur la base de :", "items": ["Contrat : Pour remplir nos obligations contractuelles envers vous", "Obligation légale : Pour respecter les exigences réglementaires", "Intérêts légitimes : Pour la prévention de la fraude et l'amélioration des services", "Consentement : Pour les communications marketing (le cas échéant)"] },
     "s5": { "title": "5. Partage et divulgation des données", "intro": "Nous pouvons partager vos informations avec :", "items": ["Fournisseurs de services de vérification d'identité", "Processeurs de paiement et partenaires bancaires", "Fournisseurs d'hébergement cloud et d'infrastructure", "Services d'analyse et de surveillance", "Autorités légales et réglementaires sur demande", "Conseillers professionnels (avocats, comptables, auditeurs)"], "note": "Nous ne vendons pas vos informations personnelles à des tiers." },
     "s6": { "title": "6. Transferts internationaux de données", "content": "Vos informations peuvent être transférées et traitées dans des pays en dehors du Royaume-Uni et de l'EEE. Nous assurons des garanties appropriées, y compris les Clauses Contractuelles Types approuvées par l'ICO." },
     "s7": { "title": "7. Conservation des données", "content": "Nous conservons vos informations personnelles aussi longtemps que nécessaire pour fournir nos Services et respecter les obligations légales. Les réglementations anti-blanchiment exigent la conservation de certains dossiers pendant au moins 5 ans. Les enregistrements de transactions peuvent être conservés jusqu'à 7 ans." },
-    "s8": { "title": "8. Vos droits", "intro": "Conformément au RGPD, vous disposez des droits suivants :", "items": ["Accès : Demander une copie de vos données personnelles", "Rectification : Demander la correction de données inexactes", "Effacement : Demander la suppression de vos données (avec exceptions)", "Limitation : Demander un traitement limité de vos données", "Portabilité : Recevoir vos données dans un format structuré", "Opposition : S'opposer au traitement basé sur les intérêts légitimes", "Retrait du consentement : Lorsque le traitement est basé sur le consentement"], "note": "Pour exercer ces droits, contactez-nous à privacy@coinly.com. Vous avez également le droit de déposer une plainte auprès de l'ICO." },
+    "s8": { "title": "8. Vos droits", "intro": "Conformément au RGPD, vous disposez des droits suivants :", "items": ["Accès : Demander une copie de vos données personnelles", "Rectification : Demander la correction de données inexactes", "Effacement : Demander la suppression de vos données (avec exceptions)", "Limitation : Demander un traitement limité de vos données", "Portabilité : Recevoir vos données dans un format structuré", "Opposition : S'opposer au traitement basé sur les intérêts légitimes", "Retrait du consentement : Lorsque le traitement est basé sur le consentement"], "note": "Pour exercer ces droits, contactez-nous à privacy@cryptogen.com. Vous avez également le droit de déposer une plainte auprès de l'ICO." },
     "s9": { "title": "9. Mesures de sécurité", "content": "Nous mettons en œuvre des mesures de sécurité standard, y compris le chiffrement SSL 256 bits, des centres de données sécurisés, des contrôles d'accès et des audits réguliers. Cependant, aucune méthode de transmission sur Internet n'est sécurisée à 100%." },
     "s10": { "title": "10. Nous contacter", "intro": "Pour les demandes relatives à la confidentialité ou pour exercer vos droits :", "role": "Délégué à la protection des données" }
   },
@@ -172,7 +172,7 @@
     "registeredOffice": "Siège social",
     "regulatoryStatus": "Statut réglementaire",
     "fcaTitle": "Financial Conduct Authority (FCA)",
-    "fcaDesc": "Coinly Ltd est enregistrée auprès de la Financial Conduct Authority en vertu des réglementations 2017 sur le blanchiment d'argent en tant qu'entreprise de crypto-actifs.",
+    "fcaDesc": "Cryptogen Ltd est enregistrée auprès de la Financial Conduct Authority en vertu des réglementations 2017 sur le blanchiment d'argent en tant qu'entreprise de crypto-actifs.",
     "fcaRegNumber": "Numéro d'enregistrement FCA",
     "icoTitle": "Information Commissioner's Office (ICO)",
     "icoDesc": "Enregistrée en tant que responsable du traitement des données personnelles.",
@@ -191,14 +191,14 @@
     "complaints": "Procédure de réclamation",
     "complaintsDesc": "Si vous avez une réclamation concernant nos services, veuillez d'abord contacter notre équipe de support client. Si vous n'êtes pas satisfait, vous pouvez escalader votre plainte à :",
     "disclaimer": "Avertissement",
-    "disclaimerContent": "Coinly Ltd ne fournit pas de conseils en investissement. Les informations fournies sur notre plateforme sont à titre informatif uniquement et ne doivent pas être interprétées comme des conseils financiers, d'investissement ou juridiques. Les investissements en cryptomonnaies sont très volatils et peuvent entraîner des pertes importantes."
+    "disclaimerContent": "Cryptogen Ltd ne fournit pas de conseils en investissement. Les informations fournies sur notre plateforme sont à titre informatif uniquement et ne doivent pas être interprétées comme des conseils financiers, d'investissement ou juridiques. Les investissements en cryptomonnaies sont très volatils et peuvent entraîner des pertes importantes."
   },
   "cookies": {
     "badge": "Politique de cookies",
     "title": "Politique de cookies",
     "lastUpdated": "Dernière mise à jour : 1er février 2026",
     "whatAre": "Que sont les cookies ?",
-    "whatAreDesc": "Les cookies sont de petits fichiers texte placés sur votre ordinateur ou appareil mobile lorsque vous visitez un site web. Ils sont largement utilisés pour faire fonctionner les sites web plus efficacement et améliorer l'expérience utilisateur. Cette politique explique comment Coinly Ltd utilise les cookies.",
+    "whatAreDesc": "Les cookies sont de petits fichiers texte placés sur votre ordinateur ou appareil mobile lorsque vous visitez un site web. Ils sont largement utilisés pour faire fonctionner les sites web plus efficacement et améliorer l'expérience utilisateur. Cette politique explique comment Cryptogen Ltd utilise les cookies.",
     "howWeUse": "Comment nous utilisons les cookies",
     "howWeUseDesc": "Nous utilisons les cookies à diverses fins, notamment :",
     "howWeUseItems": ["Vous maintenir connecté à votre compte", "Mémoriser vos préférences et paramètres", "Comprendre comment vous utilisez notre plateforme", "Améliorer nos services", "Assurer la sécurité de votre compte", "Détecter et prévenir les activités frauduleuses"],
@@ -269,11 +269,11 @@
     "badge": "Documentation",
     "title": "Comment pouvons-nous vous",
     "titleHighlight": "aider ?",
-    "subtitle": "Parcourez notre documentation complète, nos guides et tutoriels pour tirer le meilleur parti de Coinly.",
+    "subtitle": "Parcourez notre documentation complète, nos guides et tutoriels pour tirer le meilleur parti de Cryptogen.",
     "searchPlaceholder": "Rechercher dans la documentation...",
     "gettingStarted": "Pour commencer",
     "started": {
-      "quickStart": { "title": "Guide de démarrage rapide", "description": "Soyez opérationnel avec Coinly en moins de 5 minutes" },
+      "quickStart": { "title": "Guide de démarrage rapide", "description": "Soyez opérationnel avec Cryptogen en moins de 5 minutes" },
       "wallet": { "title": "Créer votre premier portefeuille", "description": "Apprenez à configurer et sécuriser votre portefeuille crypto" },
       "security": { "title": "Bonnes pratiques de sécurité", "description": "Conseils essentiels pour protéger vos actifs" }
     },
@@ -299,7 +299,7 @@
     "videoDesc": "Regardez des guides vidéo pas à pas pour les apprenants visuels",
     "watchNow": "Regarder",
     "communityForum": "Forum communautaire",
-    "communityDesc": "Rejoignez les discussions avec d'autres utilisateurs Coinly",
+    "communityDesc": "Rejoignez les discussions avec d'autres utilisateurs Cryptogen",
     "joinCommunity": "Rejoindre la communauté",
     "cantFind": "Vous ne trouvez pas ce que vous cherchez ?",
     "cantFindDesc": "Notre équipe de support est disponible 24/7 pour vous aider.",

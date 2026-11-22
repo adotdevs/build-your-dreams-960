@@ -22,7 +22,7 @@ const Login = () => {
 
   const resolveEmail = (input: string): string => {
     if (input.includes('@')) return input;
-    return `${input.toLowerCase().replace(/[^a-z0-9_-]/g, '')}@coinly.internal`;
+    return `${input.toLowerCase().replace(/[^a-z0-9_-]/g, '')}@cryptogen.internal`;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

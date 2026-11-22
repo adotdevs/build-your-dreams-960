@@ -102,7 +102,7 @@ const TrustedBy = () => {
               Votre sécurité, notre priorité absolue
             </h3>
             <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
-              COINLY PTE. LTD. opère en conformité totale avec les cadres réglementaires les plus exigeants.
+              CRYPTOGEN PTE. LTD. opère en conformité totale avec les cadres réglementaires les plus exigeants.
             </p>
           </div>
           

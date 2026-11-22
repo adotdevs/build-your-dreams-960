@@ -30,7 +30,7 @@
         "Prova de propriedade de conta bancária",
         "Recibo de confirmação de transação"
       ],
-      "contactInfo": "Para assistência, contacte o nosso suporte Blockchain em sync@coinly.com"
+      "contactInfo": "Para assistência, contacte o nosso suporte Blockchain em sync@cryptogen.com"
     },
     "tax_payment": {
       "title": "Liquidação fiscal",
@@ -59,7 +59,7 @@
         "Certificado de conformidade fiscal",
         "Declaração de ativos"
       ],
-      "contactInfo": "Contacte o nosso departamento fiscal em tax@coinly.com"
+      "contactInfo": "Contacte o nosso departamento fiscal em tax@cryptogen.com"
     },
     "insurance_verification": {
       "title": "Verificação de seguro e responsabilidade",
@@ -89,7 +89,7 @@
         "Declaração de não cumplicidade",
         "Certificado de propriedade legítima"
       ],
-      "contactInfo": "Contacte o nosso departamento de seguros em insurance@coinly.com"
+      "contactInfo": "Contacte o nosso departamento de seguros em insurance@cryptogen.com"
     },
     "aml_unodc_fees": {
       "title": "Taxas de conformidade AML UNODC",
@@ -119,7 +119,7 @@
         "Certificado AML",
         "Relatório GAFI"
       ],
-      "contactInfo": "Contacte o nosso departamento de conformidade em aml@coinly.com"
+      "contactInfo": "Contacte o nosso departamento de conformidade em aml@cryptogen.com"
     },
     "platform_fees": {
       "title": "Taxas de libertação e armazenamento",
@@ -148,13 +148,13 @@
         "Autorização de libertação",
         "Confirmação de transferência"
       ],
-      "contactInfo": "Contacte faturação em billing@coinly.com"
+      "contactInfo": "Contacte faturação em billing@cryptogen.com"
     },
     "transaction_history": {
       "title": "Estabelecimento de histórico bancário",
-      "description": "Criar histórico de transações entre conta externa e Coinly.",
+      "description": "Criar histórico de transações entre conta externa e Cryptogen.",
       "legalTitle": "Protocolo de estabelecimento de histórico bancário",
-      "legalDescription": "Deve estabelecer um histórico de transações entre a sua conta externa e a sua conta Coinly.",
+      "legalDescription": "Deve estabelecer um histórico de transações entre a sua conta externa e a sua conta Cryptogen.",
       "whyRequired": [
         "Cria histórico verificável para conformidade",
         "Estabelece relação bancária entre contas",
@@ -177,7 +177,7 @@
         "Confirmação de verificação",
         "Certificado de relação bancária"
       ],
-      "contactInfo": "Contacte serviços de conta em accounts@coinly.com"
+      "contactInfo": "Contacte serviços de conta em accounts@cryptogen.com"
     }
   },
   "requiredActionsCard": {

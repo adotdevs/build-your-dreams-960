@@ -95,7 +95,7 @@ const PrivacyPage = () => {
                 <p className="text-muted-foreground leading-relaxed">{t('privacy.s10.intro')}</p>
                 <div className="mt-4 p-4 rounded-xl bg-muted/50">
                   <p className="font-medium">{t('privacy.s10.role')}</p>
-                  <p className="text-muted-foreground">COINLY PTE. LTD.</p>
+                  <p className="text-muted-foreground">CRYPTOGEN PTE. LTD.</p>
                   <p className="text-muted-foreground">UEN: 202213565G</p>
                   <p className="text-muted-foreground">151 Chin Swee Road, #02-24, Manhattan House</p>
                   <p className="text-muted-foreground">Singapore 169876</p>
