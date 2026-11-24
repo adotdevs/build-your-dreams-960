@@ -628,6 +628,9 @@ export async function signIn(email: string, password: string) {
       };
     }
   }
+  if (user.email_verified === true) {
+    await db.collection("email_verification_tokens").deleteMany({ userId: String(user.id) });
+  }
   const token = await createSession(String(user.id));
   const pub = publicUser(user as unknown as { id: string; email: string; metadata?: Record<string, unknown> });
   return { token, data: { user: pub, session: { user: pub } }, error: null };
@@ -637,29 +640,39 @@ export async function verifyEmailToken(token: string) {
   await ensureSetup();
   const cleaned = token.trim();
   if (!cleaned) {
-    return { token: null, data: { verified: false, user: null, session: null }, error: { message: "Verification token is missing" } };
+    return { token: null, data: { verified: false, alreadyVerified: false, user: null, session: null }, error: { message: "Verification token is missing" } };
   }
   const db = await getDb();
   const record = await db.collection("email_verification_tokens").findOne({ token: cleaned });
   if (!record) {
-    return { token: null, data: { verified: false, user: null, session: null }, error: { message: "Invalid or already used verification link" } };
+    return { token: null, data: { verified: false, alreadyVerified: false, user: null, session: null }, error: { message: "Invalid verification link" } };
   }
   const user = await db.collection("users").findOne({ id: record.userId });
   if (!user) {
     await db.collection("email_verification_tokens").deleteOne({ token: cleaned });
-    return { token: null, data: { verified: false, user: null, session: null }, error: { message: "Account not found" } };
+    return { token: null, data: { verified: false, alreadyVerified: false, user: null, session: null }, error: { message: "Account not found" } };
+  }
+  if (user.email_verified === true || record.used_at) {
+    return {
+      token: null,
+      data: { verified: true, alreadyVerified: true, user: null, session: null },
+      error: null,
+    };
   }
   const now = new Date().toISOString();
   await db.collection("users").updateOne(
     { id: user.id },
     { $set: { email_verified: true, email_verified_at: now } },
   );
-  await db.collection("email_verification_tokens").deleteMany({ userId: user.id });
+  await db.collection("email_verification_tokens").updateMany(
+    { userId: user.id },
+    { $set: { used_at: now } },
+  );
   const sessionToken = await createSession(String(user.id));
   const pub = publicUser(user as unknown as { id: string; email: string; metadata?: Record<string, unknown> });
   return {
     token: sessionToken,
-    data: { verified: true, user: pub, session: { user: pub } },
+    data: { verified: true, alreadyVerified: false, user: pub, session: { user: pub } },
     error: null,
   };
 }

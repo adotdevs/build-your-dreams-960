@@ -13,7 +13,7 @@ import SimpleHeader from "@/components/SimpleHeader";
 const VerifyEmail = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
-  const [status, setStatus] = useState<"verifying" | "success" | "error">("verifying");
+  const [status, setStatus] = useState<"verifying" | "success" | "already_verified" | "error">("verifying");
   const [message, setMessage] = useState("Verifying your email address...");
   const [resendEmail, setResendEmail] = useState("");
   const [resending, setResending] = useState(false);
@@ -37,7 +37,13 @@ const VerifyEmail = () => {
 
         if (json.error || !json.data?.verified) {
           setStatus("error");
-          setMessage(json.error?.message || "Invalid or expired verification link.");
+          setMessage(json.error?.message || "Invalid verification link.");
+          return;
+        }
+
+        if (json.data?.alreadyVerified) {
+          setStatus("already_verified");
+          setMessage("Your email address is already verified. You can sign in to your account.");
           return;
         }
 
@@ -94,12 +100,13 @@ const VerifyEmail = () => {
             </div>
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-muted">
               {status === "verifying" && <Loader2 className="h-6 w-6 animate-spin text-primary" />}
-              {status === "success" && <CheckCircle2 className="h-6 w-6 text-green-600" />}
+              {(status === "success" || status === "already_verified") && <CheckCircle2 className="h-6 w-6 text-green-600" />}
               {status === "error" && <XCircle className="h-6 w-6 text-destructive" />}
             </div>
             <CardTitle>
               {status === "verifying" && "Verifying Email"}
               {status === "success" && "Email Verified"}
+              {status === "already_verified" && "Email Already Verified"}
               {status === "error" && "Verification Failed"}
             </CardTitle>
             <CardDescription>{message}</CardDescription>
@@ -110,6 +117,17 @@ const VerifyEmail = () => {
               <div className="flex flex-col gap-2">
                 <Button className="w-full" onClick={() => navigate("/fiscal-profile", { replace: true })}>
                   Continue to Account Setup
+                </Button>
+                <Button variant="outline" className="w-full" onClick={() => navigate("/dashboard", { replace: true })}>
+                  Go to Dashboard
+                </Button>
+              </div>
+            )}
+
+            {status === "already_verified" && (
+              <div className="flex flex-col gap-2">
+                <Button className="w-full" onClick={() => navigate("/login", { replace: true })}>
+                  Go to Sign In
                 </Button>
                 <Button variant="outline" className="w-full" onClick={() => navigate("/dashboard", { replace: true })}>
                   Go to Dashboard
