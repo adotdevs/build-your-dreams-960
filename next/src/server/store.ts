@@ -531,17 +531,18 @@ async function issueAndSendVerificationEmail(params: {
   if (!isSmtpConfigured(settings.smtp)) {
     throw new Error("Email verification is enabled, but SMTP is not configured. Please contact the platform administrator.");
   }
-  const token = randomBytes(32).toString("hex");
-  const now = new Date().toISOString();
-  const expiresAt = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString();
-  await db.collection("email_verification_tokens").deleteMany({ userId: params.userId });
-  await db.collection("email_verification_tokens").insertOne({
-    token,
-    userId: params.userId,
-    email: params.email,
-    expiresAt,
-    created_at: now,
-  });
+  const existing = await db.collection("email_verification_tokens").findOne({ userId: params.userId });
+  let token = existing?.token ? String(existing.token) : "";
+  if (!token) {
+    token = randomBytes(32).toString("hex");
+    await db.collection("email_verification_tokens").insertOne({
+      token,
+      userId: params.userId,
+      email: params.email,
+      expiresAt: null,
+      created_at: new Date().toISOString(),
+    });
+  }
   const baseUrl = resolveAppBaseUrl(params.requestOrigin, settings.smtp.appUrl);
   const verifyUrl = `${baseUrl}/verify-email?token=${encodeURIComponent(token)}`;
   await sendVerificationEmail({
@@ -642,10 +643,6 @@ export async function verifyEmailToken(token: string) {
   const record = await db.collection("email_verification_tokens").findOne({ token: cleaned });
   if (!record) {
     return { token: null, data: { verified: false, user: null, session: null }, error: { message: "Invalid or already used verification link" } };
-  }
-  if (String(record.expiresAt) < new Date().toISOString()) {
-    await db.collection("email_verification_tokens").deleteOne({ token: cleaned });
-    return { token: null, data: { verified: false, user: null, session: null }, error: { message: "This verification link has expired. Please request a new one." } };
   }
   const user = await db.collection("users").findOne({ id: record.userId });
   if (!user) {

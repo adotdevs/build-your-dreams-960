@@ -55,7 +55,7 @@ export async function sendVerificationEmail(params: {
 }) {
   const greeting = params.firstName ? `Hi ${params.firstName},` : "Hello,";
   const subject = "Verify your Cryptogen email address";
-  const text = `${greeting}\n\nPlease verify your email address by opening this link:\n${params.verifyUrl}\n\nThis link will expire in 24 hours. If you did not create an account, you can safely ignore this email.`;
+  const text = `${greeting}\n\nPlease verify your email address by opening this link:\n${params.verifyUrl}\n\nIf you did not create an account, you can safely ignore this email.`;
   const html = `
     <div style="font-family: system-ui, -apple-system, sans-serif; max-width: 560px; margin: 0 auto; padding: 32px 24px; color: #111827;">
       <h2 style="margin: 0 0 16px; font-size: 26px; font-weight: 700; letter-spacing: -0.02em;">cryptogen<span style="color: #EA5228;">.</span></h2>
@@ -73,7 +73,7 @@ export async function sendVerificationEmail(params: {
         <a href="${params.verifyUrl}" style="color: #2563eb;">${params.verifyUrl}</a>
       </p>
       <p style="margin: 24px 0 0; font-size: 12px; color: #9ca3af;">
-        This link expires in 24 hours. If you did not sign up for Cryptogen, please ignore this email.
+        If you did not sign up for Cryptogen, please ignore this email.
       </p>
     </div>
   `;
